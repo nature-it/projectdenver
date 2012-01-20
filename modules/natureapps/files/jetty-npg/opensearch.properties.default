@@ -1,0 +1,33 @@
+# Live Marklogic Database Details
+marklogic.parser = libsearch
+#marklogic.url = http://localhost:7080/contentstore_query/
+marklogic.opensearch.username = opensearch_app
+marklogic.opensearch.password = CHANGEME
+marklogic.opensearch.environment = live
+
+# LIVE caching details 
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11211|npgcache2:11211
+marklogic.host = 192.168.4.45
+marklogic.port = 8003
+marklogic.opensearch.libSearchModuleUri = /search/npg_advance_ordered.xqy
+productsXml.url=http://localhost:7080/charleston_document/document?username=opensearch_app&password=CHANGEME&environment=staging&target_uri=/library/products/products.xml
+
+#DEPLOY-494
+searchStopWords=a,about,again,all,almost,also,although,always,among,an,and,another,any,are,as,at,be,because,been,before,being,between,both,but,by,can,could,did,do,does,done,due,during,each,either,enough,especially,etc,for,found,from,further,had,has,have,having,here,how,however,i,if,in,into,is,it,its,itself,just,kg,km,made,mainly,make,may,mg,might,ml,mm,most,mostly,must,nearly,neither,no,nor,obtained,of,often,on,our,overall,perhaps,pmid,quite,rather,really,regarding,seem,seen,several,should,show,showed,shown,shows,significantly,since,so,some,such,than,that,the,their,theirs,them,then,there,therefore,these,they,this,those,through,thus,to,upon,use,used,using,various,very,was,we,were,what,when,which,while,with,within,without,would
+maxSearchTermCharacterLength=1200
+maxBooleanOperatorCount=30
+webtrends.dcsid=dcsa1iwjduz5bdn8a175aji4b_8y1r
+webtrends.events.service.baseUrl=http://dc.webtrends.com/v1/${dcsid}/events.svc
+webtrends.id.service.baseUrl=http://dc.webtrends.com/v1/${dcsid}/ids.svc
+exutors.fixed.pool.size=30
+webtrends.service.timeout=3000
+webtrends.serverside.enabled=true
+npg.standard.host=http://www.nature.com
+
+#DEPLOY-570
+ml.connection.db=Documents
+ml.connection.host=192.168.4.45
+ml.connection.port=8003
+ml.connection.user=opensearch_app
+ml.connection.password=CHANGEME

@@ -1,0 +1,99 @@
+poolNewsPassword=CHANGEME
+poolNewsUser=news_production
+poolNewsJdbcUrl=jdbc\:mysql\://192.168.4.67\:3306/articling_production
+poolNewsDriverClass=com.mysql.jdbc.Driver
+poolDriverClass=com.microsoft.sqlserver.jdbc.SQLServerDriver
+poolJdbcUrl=jdbc:sqlserver://naturedb.nature.com:1433;DatabaseName=Reg_Data;applicationName=liveWebAdmin
+poolPassword=CHANGEME
+poolUser=app_foxtrot_nature
+poolMinPoolSize=15
+poolMaxIdleTime=3000
+poolTestConnection=70
+poolMaxPoolSize=65
+poolMaxAge=0
+poolInitialPoolSize=15
+poolCheckoutTimeout=5000
+
+npg.natureprotocols.host=http://www.nature.com/protocols
+cacheServers=npgcache1:11211|npgcache2:11211
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+#cacheServers=10.1.1.14:11212|10.1.1.18:11212|10.1.1.33:11212
+docroot=/mnt/fs/Web/NPG
+docBase=/mnt/fs/Web/NPG
+npg.nboss.docbase=/mnt/fs/Web/NPG
+npg.soap.jpt.license.props=/mnt/fs/Web/NPG/config/jpt.properties
+mysiteaccount.reports.dir=/mnt/fs/Web/NPG/
+customer.service.email=institutions@nature.com
+npg.cybersource.prop=
+npg.tango.host=http://bogus.com
+recommendedNChinaFileDocBase=
+npg.nboss.mailserver=babylon.nj-ws.nature.com
+npg.nboss.newsfile=/mnt/fs/Web/NPG/templates/press_config/Dataout.xml
+npg.nboss.helpfile=/mnt/fs/Web/NPG/templates/press_config/helptext.xml
+#npg.naturejobs.host=http://localhost:7380/naturejobs/science
+npg.naturejobs.host=http://www.nature.com/naturejobs/science
+npg.isnsearch.host=
+npg.standard.host=http://www.nature.com
+os.name=
+npg.event.filepath =/mnt/fs/Web/NPG/templates/webadmin
+cybersourceMerchantID=naturepub
+cybersourceServerURL=http://ics2.ic3.com:80/
+cybersourceKeysPath=/opt/ics/keys
+cybersourceHostID=170.224.106.98
+
+
+#credit card encryption certificate location
+cc.encrypt.certificate.path=/mnt/fs/cert/NPGOperationsEncryption.cer
+
+#max allowed concurrent logins. (individual logins)
+personal.user.max.concurrency.limit=5
+bibitConfigFile=bibit
+
+marklogic.url=http://localhost:7080/contentstore_query/execute
+#marklogic.url=http://localhost:7080/contentstore_query/execute
+marklogic.user=ingestor
+marklogic.password=CHANGEME
+environment=live
+marklogic.charleston.url=http://www.nature.com/charleston_document/document
+
+
+#Added per DEPLOY-121 Webadmin dependency
+# Test DCSID is dcsw6hhld100000g0f08z09mu_7i5x
+webtrends.dcsid = dcs0zztfg00000s969s37qoal_2f6z
+webtrends.events.service.baseUrl = http://dc.webtrends.com/v1/${dcsid}/events.svc
+webtrends.id.service.baseUrl = http://dc.webtrends.com/v1/${dcsid}/ids.svc
+exutors.fixed.pool.size = 30
+webtrends.service.timeout = 3000
+webtrends.serverside.enabled = false
+ppvServiceEnabled=true
+ppvServiceURL=http://localhost/process-order/@licenseId@
+
+natureevents.eotw.url=http://www.nature.com/natureevents/science/audiences/<JOURNAL_CODE>?eotw=true&format=xml
+#natureevents.eotw.url=http://localhost:7380/natureevents/science/audiences/&lt;JOURNAL_CODE&gt;?eotw=true&format=xml
+#natureevents.em.url=http://localhost:7380/natureevents/science/audiences/&lt;JOURNAL_CODE&gt;/event_match?format=xml 
+natureevents.em.url=http://www.nature.com/natureevents/science/audiences/<JOURNAL_CODE>/event_match?format=xml 
+
+#########cache properties########
+
+##if set to 'danga' danga client will be used. Default is spy memcahced.
+cache.memcacheClient=
+
+## be default true. set 'false' to disable
+cache.enabled=true
+
+##if not set defaults to '3' sec.
+cache.timeOutInSec=3
+
+cookie.domain=.nature.com
+
+#deploy-469
+mysiteaccount.lppvusage.reports.dir=/mnt/fs/web/lppv_reports
+marklogic.host=192.168.4.45
+marklogic.port=8003
+marklogic.db=Documents
+
+uri.site=http://www.nature.com
+
+#DEPLOY-547
+ppvAccessDummyLogger.interval.hour=1
+pegasus.securekeys.public.key.path=/mnt/fs/Web/NPG/securekeys/pwd/npg.der

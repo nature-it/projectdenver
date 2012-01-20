@@ -1,0 +1,27 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v1="http://webservices.elsevier.com/schemas/easi/headers/types/v1" xmlns:v7="http://webservices.elsevier.com/schemas/metadata/abstracts/types/v7">
+   <soapenv:Header>
+      <v1:EASIReq>
+         <!--Optional:-->
+         <ReqId>001</ReqId>
+         <Ver>2</Ver>
+         <Consumer>NATURE</Consumer>
+         <!--Optional:-->
+         <ConsumerClient>tester_client</ConsumerClient>
+         <!--Optional:-->
+         <LogLevel>Debug</LogLevel>
+      </v1:EASIReq>
+   </soapenv:Header>
+   <soapenv:Body>
+      <getCitedByCount xmlns="http://webservices.elsevier.com/schemas/metadata/abstracts/types/v7">
+         <getCitedByCountReqPayload> 
+  		<dataResponseStyle>MESSAGE</dataResponseStyle> 
+		<absMetSource>all</absMetSource> 
+		<responseStyle>wellDefined</responseStyle> 
+		<inputKey>
+			<doi xmlns="">${doiToken}</doi>
+			<clientCRF xmlns="">0</clientCRF>
+		</inputKey>  
+	  </getCitedByCountReqPayload>
+      </getCitedByCount>
+</soapenv:Body>
+</soapenv:Envelope>

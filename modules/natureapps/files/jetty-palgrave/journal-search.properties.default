@@ -1,0 +1,168 @@
+# mark logic xcc url
+#xccurl=xcc://jhoy:joe321@192.168.88.103:8003/Test
+#xccurl=xcc\://xb3user\:xBT27_archiveit@192.168.4.45\:8003/
+xccurl=xcc\://xb3user\:xBT27_archiveit@10.1.1.60\:8003/
+
+# mark logic collections and directory
+#xml.isnpub.collection=/isn/pub
+#xml.isnpub.directory=/isn/pub
+
+#xml.isngw.collection=/isn/gateway
+#xml.isngw.directory=/isn/gateway
+
+# cache config
+#cacheServers = 10.1.1.14:11211
+#cacheServers=10.1.1.14:11212|10.1.1.18:11212|10.1.1.33:11212
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11211|npgcache2:11211
+# one day expiration (60 * 24)
+#cache.search_service_expiration_in_min = 60
+
+# MSSQL settings for saved search
+# use stagging (dev is currently broken)
+poolPassword=CHANGEME
+poolUser=app_foxtrot_nature
+
+poolJdbcUrl=jdbc:sqlserver://naturedb.nj-ws.nature.com:1433;DatabaseName=Reg_Data;applicationName=livePalgraveJournalsSearch
+poolDriverClass=com.microsoft.jdbc.sqlserver.SQLServerDriver
+
+poolInitialPoolSize=10
+poolMinPoolSize=5
+poolMaxIdleTime=1000
+poolTestConnection=60
+poolMaxPoolSize=35
+poolMaxAge=0
+poolCheckoutTimeout=5000
+
+#crossref login
+crossref.username = nature
+crossref.password = CHANGEME
+
+#contentstore parameters
+contentstore.url=http://www.nature.com/contentstore_query/
+#contentstore.url=http://localhost:7080/contentstore_query/
+xcc.user=live-search
+xcc.password=CHANGEME
+xcc.environment=live
+
+articlinghost=
+npg.tango.host=
+
+marklogic.charleston.url=http://localhost:7080/charleston_document/document
+personal.user.max.concurrency.limit=5
+
+marklogic.url=http://www.nature.com/contentstore_query/execute
+marklogic.user=live-search
+marklogic.password=CHANGEME
+environment=live
+
+npg.nboss.docbase=/mnt/fs/Web
+docroot=/mnt/fs/Web/palgrave
+docBase=/mnt/fs/Web/palgrave
+os.name=
+
+family=1
+#url stuff
+uri.site=http://www.
+uri.site.suffix=palgrave-journals.com
+DummyLogger.interval.hour=12
+
+#journal acronym lookup table
+
+journal.OMJ=Organization Management Journal
+journal.JORS=Journal of the Operational Research Society
+journal.PCS=Psychoanalysis, Culture & Society
+journal.JIBS=Journal of International Business Studies
+journal.CEP=Comparative European Politics
+journal.POLITY=Polity
+journal.JBA=Journal of Building Appraisal
+journal.JIT=Journal of Information Technology
+journal.PM=Pensions: An International Journal
+journal.JPHP=Journal of Public Health Policy
+journal.JBR=Journal of Banking Regulation
+journal.EPS=European Political Science
+journal.AP=Acta Politica
+journal.BM=Journal of Brand Management
+journal.PB=Place Branding and Public Diplomacy
+journal.GPP=The Geneva Papers on Risk and Insurance
+journal.GRIR=The Geneva Risk and Insurance Review
+journal.JDG=International Journal of Disclosure and Governance
+journal.SJ=Security Journal
+journal.JIRD=Journal of International Relations and Development
+journal.FR=Feminist Review
+journal.RLP=Journal of Retail & Leisure Property
+journal.CPT=Contemporary Political Theory
+journal.STH=Social Theory & Health
+journal.JCB=Journal of Commercial Biotechnology
+journal.LST=Latino Studies
+journal.EJIS=European Journal of Information Systems
+journal.FSM=Journal of Financial Services Marketing
+journal.CES=Comparative Economic Studies
+journal.FP=French Politics
+journal.CPCS=Crime Prevention and Community Safety
+journal.JDHF=Journal of Derivatives & Hedge Funds
+journal.DAM=Journal of Digital Asset Management
+journal.MEL=Maritime Economics & Logistics
+journal.JAM=Journal of Asset Management
+journal.RPM=Journal of Revenue and Pricing Management
+journal.IJEA=International Journal of Educational Advancement
+journal.ELMR=Economic & Labour Market Review
+journal.EJDR=The European Journal of Development Research
+journal.ORI=OR Insight
+journal.CRR=Corporate Reputation Review
+journal.AJP=The American Journal of Psychoanalysis
+journal.EEJ=Eastern Economic Journal
+journal.DDDMP=Journal of Direct, Data and Digital Marketing Practice
+journal.DBM=Journal of Database Marketing & Customer Strategy Management
+journal.JT=Journal of Targeting, Measurement and Analysis for Marketing
+journal.BE=Business Economics
+journal.SUB=Subjectivity
+journal.MDS=Monthly Digest of Statistics
+journal.HEP=Higher Education Policy
+journal.JOS=Journal of Simulation
+journal.IP=International Politics
+journal.RM=Risk Management
+journal.KMRP=Knowledge Management Research & Practice
+journal.ABM=Asian Business & Management
+#journal.EMR=European Management Review
+journal.FS=Financial Statistics
+journal.UDI=Urban Design International
+journal.BP=British Politics
+journal.IMFSP=IMF Staff Papers
+journal.DEVELOPMENT=Development
+journal.HSQ=Health Statistics Quarterly
+journal.AAS=Annual Abstract of Statistics
+journal.FSP=Family Spending
+journal.PT=Population Trends
+journal.RT=Regional Trends
+journal.ST=Social Trends
+journal.UKBP=United Kingdom Balance of Payments: The Pink Book
+journal.UKEA=United Kingdom Economic Accounts
+journal.UKNA=United Kingdom National Accounts: The Blue Book
+journal.BIOSOC=BioSocieties
+journal.PMED=postmedieval: a journal of medieval cultural studies
+journal.IMFER=IMF Economic Review
+journal.JITTC=Journal of Information Technology Teaching Cases
+journal.THR=Tourism and Hospitality Research
+journal.JMM=Journal of Medical Marketing
+journal.JGM=Journal of Generic Medicines
+journal.IVS=Information Visualization
+journal.MSQ=Migration Statistics Quarterly Report
+url-lookup./mlsearch-palweb/iaor_search.html=/iaor/search/executeSearch
+
+mailTemplatePath=/palgrave
+npg.nboss.mailserver=babylon.nature.com
+
+
+#DEPLOY-293
+opensearch.url=http://localhost:7080/opensearch/
+alt_parser=libsearch
+# one hour expiration (60)
+cache.search_service_expiration_in_min=60
+
+cookie.domain=.nature.com
+
+#DEPLOY-516
+marklogic.host=192.168.4.45
+marklogic.port=8003
+marklogic.db=Documents

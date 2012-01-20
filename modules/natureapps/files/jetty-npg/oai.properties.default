@@ -1,0 +1,10 @@
+# LIVE Marklogic Database Details
+ #marklogic.url = http://www.nature.com/contentstore_query/execute
+marklogic.url = http://localhost:7080/contentstore_query/execute
+marklogic.oai.username = oai_app
+marklogic.oai.password = CHANGEME
+marklogic.oai.environment = live
+
+# LIVE caching details
+# cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11211|npgcache2:11211

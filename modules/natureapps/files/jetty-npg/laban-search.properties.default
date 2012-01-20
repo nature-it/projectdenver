@@ -1,0 +1,203 @@
+# mark logic xcc url
+#xccurl=xcc://jhoy:joe321@192.168.88.103:8003/Test
+xccurl=xcc\://xb3user\:xBT27_archiveit@192.168.4.45\:8003/
+#xccurl=xcc\://xb3user\:xBT27_archiveit@10.1.1.60\:8003/
+
+# mark logic collections and directory
+#xml.isnpub.collection=/isn/pub
+#xml.isnpub.directory=/isn/pub
+
+#xml.isngw.collection=/isn/gateway
+#xml.isngw.directory=/isn/gateway
+
+# cache config
+#cacheServers = 10.1.1.14:11211
+#cacheServers=10.1.1.14:11212|10.1.1.18:11212|10.1.1.33:11212
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11211|npgcache2:11211
+# one day expiration (60 * 24)
+#cache.search_service_expiration_in_min = 60
+
+# MSSQL settings for saved search
+# use stagging (dev is currently broken)
+#poolPassword=CHANGEME
+#poolUser=sa
+poolPassword=CHANGEME
+poolUser=app_foxtrot_nature
+
+poolJdbcUrl=jdbc:sqlserver://naturedb.nj-ws.nature.com:1433;DatabaseName=Reg_Data;applicationName=liveLabanimalSearch
+poolDriverClass=com.microsoft.jdbc.sqlserver.SQLServerDriver
+
+poolInitialPoolSize=10
+poolMinPoolSize=5
+poolMaxIdleTime=1000
+poolTestConnection=60
+poolMaxPoolSize=35
+poolMaxAge=0
+poolCheckoutTimeout=5000
+
+#crossref login
+crossref.username = nature
+crossref.password = CHANGEME
+
+#contentstore parameters
+contentstore.url=http://www.nature.com/contentstore_query/
+#contentstore.url=http://localhost:7080/contentstore_query/execute
+xcc.user=live-search
+xcc.password=CHANGEME
+xcc.environment=live
+
+articlinghost=
+articlingarticleapi=
+searchurl=
+
+npg.tango.host=
+
+marklogic.charleston.url=http://localhost:7080/charleston_document/document
+personal.user.max.concurrency.limit=5
+
+#marklogic.url=http://www.nature.com/contentstore_query/execute
+marklogic.url=http://localhost:7080/contentstore_query/execute
+marklogic.user=live-search
+marklogic.password=CHANGEME
+environment=live
+
+npg.nboss.docbase=/mnt/fs/web
+docroot=/mnt/fs/Web/NPG
+docBase=/mnt/fs/Web/NPG
+os.name=
+
+family=2
+
+#url stuff
+uri.site=http://www.
+uri.site.suffix=labanimal.com
+DummyLogger.interval.hour=12
+
+#journal acronym lookup table
+journal.APS=Acta Pharmacologica Sinica
+journal.ADVERTISING=advertising@npg
+journal.SG=Signaling Gateway
+journal.AJH=American Journal Of Hypertension
+journal.AJA=Asian Journal of Andrology
+journal.BMT=Bone Marrow Transplantation
+journal.BDJ=British Dental Journal
+journal.BIOENT=Bioentrepeneur
+journal.BJC=British Journal of Cancer
+journal.CGT=Cancer Gene Therapy
+journal.CDD=Cell Death and Differentiation
+journal.CMG_UPDATE=Cell Migration Gateway
+#journal.CMG=Cell Migration Gateway
+journal.CR=Cell Research
+journal.CLPT=Clinical Pharmacology & Therapeutics
+journal.EMBOR=EMBO reports
+journal.EJCN=European Journal of Clinical Nutrition
+journal.EJHG=European Journal of Human Genetics
+journal.EBD=Evidence-Based Dentistry
+journal.EYE=Eye
+journal.FG=Functional Glycomics Gateway
+journal.GT=Gene Therapy
+journal.GENE=Genes and Immunity
+journal.GIMO=GI Motility online
+journal.HDY=Heredity
+journal.HR=Hypertension Research
+journal.ICB=Immunology and Cell Biology
+journal.IJIR=International Journal of Impotence Research
+journal.IJO=International Journal of Obesity
+journal.JIDSP=JID Symposium Proceedings
+journal.JCBFM=Journal of Cerebral Blood Flow & Metabolism
+journal.JES=Journal of Exposure Science and Environmental Epidemiology
+journal.JHG=Journal of Human Genetics
+journal.JHH=Journal of Human Hypertension
+journal.JID=Journal of Investigative Dermatology
+journal.JP=Journal of Perinatology
+journal.KI=Kidney International
+journal.LABINVEST=Laboratory Investigation
+journal.LEU=Leukemia
+journal.MILECANCER=Milestones Cancer
+journal.MILEDNA=Milestones DNA Technologies
+journal.MILEGENE=Milestones Gene Expression
+journal.MILECYTO=Milestones in Cytoskeleton
+journal.MILESPIN=Milestones in Spin
+journal.MODPATHOL=Modern Pathology
+journal.MP=Molecular Psychiatry
+journal.MSB=Molecular Systems Biology
+journal.MT=Molecular Therapy
+journal.MI=Mucosal Immunology
+journal.NATURE=Nature
+journal.NBT=Nature Biotechnology
+journal.NCB=Nature Cell Biology
+journal.NCHEMBIO=Nature Chemical Biology
+journal.NCHEM=Nature Chemistry
+journal.NCHINA=Nature China (International Site)
+journal.NRCARDIO=Nature Reviews Cardiology
+journal.NRENDO=Nature Reviews Endocrinology
+journal.NRGASTRO=Nature Reviews Gastroenterology and Hepatology
+journal.NRNEPH=Nature Reviews Nephrology
+journal.NRNEUROL=Nature Reviews Neurology
+journal.NRCLINONC=Nature Reviews Clinical Oncology
+journal.NRRHEUM=Nature Reviews Rheumatology
+journal.NRUROL=Nature Reviews Urology
+journal.NDIGEST=Nature Digest
+journal.NG=Nature Genetics
+journal.NGEO=Nature Geoscience
+journal.NI=Nature Immunology
+journal.NINDIA=Nature India
+journal.NMAT=Nature Materials
+journal.NM=Nature Medicine
+journal.NMETH=Nature Methods
+journal.APP_NOTES=Nature Methods Application Notes
+journal.NNANO=Nature Nanotechnology
+journal.NEURO=Nature Neuroscience
+journal.NEWS=Nature News
+journal.NPHOTON=Nature Photonics 
+journal.NPHYS=Nature Physics
+journal.NPROT=Nature Protocols
+journal.AVIANFLU=Nature Reports Avian Flu
+journal.CLIMATE=Nature Reports Climate Change
+journal.STEMCELLS=Nature Reports Stem Cells
+journal.NRC=Nature Reviews Cancer
+journal.NRD=Nature Reviews Drug Discovery
+journal.NRG=Nature Reviews Genetics
+journal.NRI=Nature Reviews Immunology
+journal.NRMICRO=Nature Reviews Microbiology
+journal.NRM=Nature Reviews Molecular Cell Biology
+journal.NRN=Nature Reviews Neuroscience
+journal.NSMB=Nature Structural & Molecular Biology
+journal.NATUREJOBS=NatureJobs
+journal.PID=NCI-Protein Interaction Database Update
+journal.NPP=Neuropsychopharmacology
+journal.OBY=Obesity
+journal.OMICS=Omics Gateway
+journal.ONC=Oncogene
+#journal.HORIZON=Horizon
+#journal.PHYSICS=Physics
+journal.PCAN=Prostate Cancer and Prostatic Diseases
+journal.PSISKB=Protein Structure Initiative Structural Genomics Knowledgebase
+journal.PSIKB=Protein Model Portal
+journal.PID=NCI-Protein Interaction Database Update                                                             
+journal.RNAI=RNAi Gateway
+journal.SCIBX=SciBX: Science-Busine eXchange
+journal.SC=Spinal Cord
+journal.AJG=The American Journal of Gastroenterology
+journal.EMBOJ=The EMBO Journal
+journal.ISMEJ=The ISME Journal
+journal.JA=The Journal of Antibiotics
+journal.TPJ=The Pharmacogenomics Journal
+journal.VITAL=Vital
+
+mailTemplatePath=/NPG/laban
+npg.nboss.mailserver=babylon.nature.com
+
+#DEPLOY-293
+opensearch.url=http://localhost:7080/opensearch/
+alt_parser=libsearch
+# one hour expiration (60)
+cache.search_service_expiration_in_min=60
+
+cookie.domain=.nature.com
+
+#DEPLOY-516
+marklogic.host=192.168.4.45
+marklogic.port=8003
+marklogic.db=Documents

@@ -1,0 +1,26 @@
+collections.default=charleston,staging
+
+ml_hosts.live=192.168.4.45
+ml_hosts.dev=dev-marklogic.nature.com
+ml_hosts.staging=192.168.88.102
+
+db.port=8003
+db.schemaname=Documents
+
+journal.root=/mnt/fs/Web
+file.root=/mnt/fs/Web
+
+xquery.folder=/usr/local/jetty-npg/resources/xqy
+entity.folder=/mnt/fs/Web/NPG/Entities
+
+# this info is used to guess broken file entities
+file.entity.extensions=jpg,jpe,jpeg,gif,tif,tiff,png,bmp,svg,ppt,doc,xls,pdf,xml,html,avi,mov,mpg,mpeg,dtd,zip,txt,eps,swf
+file.entity.folders=images,thumbs,slides,extref,cover,datafiles
+#ontology.url=http://localhost:7080/charleston_document/document?username=foxtrot_web_user&password=CHANGEME&environment=live&target_uri=/npg-subject-ontology.xml
+ontology.url=http://localhost:7080/contentstore_query/execute?username=foxtrot_web_user&password=CHANGEME&environment=live&xquery=xquery%20version%20%271.0-ml%27;import%20module%20namespace%20xinc%20=%20%22http://marklogic.com/xinclude%22%20at%20%22/MarkLogic/xinclude/xinclude.xqy%22;xinc:node-expand%28fn:doc%28%22/npg-subject-ontology.xml%22%29%29
+userinfo.url=http://localhost:7080/api/users
+
+cacheServers=npgcache1:11211|npgcache2:11211
+
+#DEPLOY-539
+npg.subject.ontology.url=http://localhost:7080/contentstore_query/execute?username=foxtrot_web_user&password=CHANGME&environment=live&xquery=declare%20namespace%20s%20%3D%20%22http%3A%2F%2Fns.nature.com%2Fsubjects%2F%22%20fn%3Acollection(%22%2Fns.nature.com%2Fsubjects%2F%22)%2Fs%3Asubjects

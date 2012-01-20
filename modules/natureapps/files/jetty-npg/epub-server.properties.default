@@ -1,0 +1,44 @@
+http.server.base.url=http://www.nature.com
+default.icon.folder=/mobile
+journal.root=/mnt/fs/Web
+resources.folder=/mnt/fs/Web/NPG/mobile
+
+#Marklogic queries
+#icon.query.url=http://www.nature.com/contentstore_query/execute?username=foxtrot_web_user&password=CHANGEME&environment=live&xquery=import%20module%20namespace%20epub=%22http://nature.com/epub%22%20at%20%22/epub/epub.xqy%22%20epub:get-icons(%22$DOIS%22)
+#epub.query.url=http://www.nature.com/contentstore_query/execute?username=foxtrot_web_user&password=CHANGEME&environment=live&xquery=import%20module%20namespace%20epub=%22http://nature.com/epub%22%20at%20%22/epub/epub.xqy%22%20epub:get-epub-xml-artifacts-plaintext(%22$DOI%22,%22$FORMAT%22,%22$DRM%22,xs%3aboolean(%22$FULLTEXT%22))
+
+#Marklogic queries
+#contentstore.url=http://localhost:7080/contentstore_query/execute
+#contentstore.user=foxtrot_web_user
+#contentstore.password=CHANGEME
+#contentstore.environment=live
+ml.connection.host=192.168.4.45
+ml.connection.port=8003
+ml.connection.user=foxtrot_web_user
+ml.connection.password=fOx500
+ml.connection.db=Documents
+
+
+#ImageMagick commands
+#cmd.get.size=identify -format %[fx:w]x%[fx:h] %s
+cmd.get.size=identify %s
+#cmd.icon.convertX=convert %s -resize x75 -gravity center -crop 75x75+0+0 +repage -density 72 -strip -quality 95 %s
+#cmd.icon.convertY=convert %s -resize 75x -gravity center -crop 75x75+0+0 +repage -density 72 -strip -quality 95 %s
+cmd.icon.convertX75=convert %s -resize x75 -gravity center -crop 75x75+0+0 +repage -density 72 -strip -quality 95 %s
+cmd.icon.convertY75=convert %s -resize 75x -gravity center -crop 75x75+0+0 +repage -density 72 -strip -quality 95 %s
+cmd.icon.convertX150=convert %s -resize x150 -gravity center -crop 150x150+0+0 +repage -density 72 -strip -quality 95 %s
+cmd.icon.convertY150=convert %s -resize 150x -gravity center -crop 150x150+0+0 +repage -density 72 -strip -quality 95 %s
+cmd.icon.compose=composite -gravity NorthWest /mnt/fs/Web/NPG/mobile/padlock.png %s %s
+cmd.img.resize=convert %s -resize %sx%s> -density 72 -strip %s
+
+#foxtrot
+foxtrot.auth.url=http://localhost:7080/foxtrot-api/authorizeuser/v1?app=mobile&lang=en
+foxtrot.enable.auth=false
+
+# ever item in cache before this will be recreated
+cache.timeStampDate=2010-11-29_00:00:00
+
+#memcached
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11212|npgcache2:11212
+expiryTimeInMin=180

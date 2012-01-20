@@ -1,0 +1,8 @@
+pce.data.interval=30m
+default.marklogic.date.interval=60m
+latest.articles.date.interval=30m
+rdf.feed.key=30m
+service.down.interval=5m
+
+crossref.duration.key=168h
+volume.issue.timeout.interval=2h

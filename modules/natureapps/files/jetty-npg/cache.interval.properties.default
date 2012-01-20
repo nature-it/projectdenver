@@ -1,0 +1,23 @@
+pce.data.interval=30m
+default.marklogic.date.interval=30m
+latest.articles.date.interval=15m
+rdf.feed.key=30m
+service.down.interval=5m
+
+jobs.duration.key=8h
+events.duration.key=24h
+related.articles.date.interval=24h
+
+latest.sitelicense.pricing.results.date.interval=120m
+
+crossref.duration.key=168h
+volume.issue.timeout.interval=2h
+#DEPLOY-545
+commenting.duration.key=5m
+#IT-11659 - change value of tracback.duration.key from 1d to 24h
+trackback.duration.key=24h
+commenting.allowed.duration.key=5m
+user.allowed.to.comment.duration.key=5m
+nature.network.duration.key=5m
+
+subjects.duration.key=1h

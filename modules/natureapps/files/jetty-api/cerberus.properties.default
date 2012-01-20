@@ -1,0 +1,8 @@
+defaultSparqlEndpointURL=https://nature.services.tso.co.uk/nature/sparql/
+defaultSelectLimit=1000
+defaultDescribeLimit=100
+defaultConstructLimit=1000
+maxByteSize=1000000
+allowSparqlEndpointParam=false
+static.resources.path.prefix=.
+namespaces.list.file=namespaces.properties

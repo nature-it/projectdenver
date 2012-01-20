@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<codes xmlns="http://ns.nature.com/common/">
+	<code subjectName="Archaeology" new="27" old="news_s17" />
+	<code subjectName="Anthropology" new="19" old="news_s17" />
+	<code subjectName="Biotechnology" new="61" old="news_s1" />
+	<code subjectName="Neuroscience" new="378" old="news_s2" />
+	<code subjectName="Business" new="66" old="news_s3" />
+	<code subjectName="Cell biology" new="80" old="news_s4" />
+	<code subjectName="Molecular biology" new="337" old="news_s4" />
+	<code subjectName="Chemistry" new="638" old="news_s5" />
+	<code subjectName="Developing World" new="134" old="news_s21" />
+	<code subjectName="Earth Sciences" new="157" old="news_s7" />
+	<code subjectName="Environmental Science" new="172" old="news_s7" />
+	<code subjectName="Ecology" new="158" old="news_s8" />
+	<code subjectName="Evolution" new="181" old="news_s22" />
+	<code subjectName="Palaeontology" new="414" old="news_s28" />
+	<code subjectName="Genetics" new="208" old="news_s9" />
+	<code subjectName="Genomics" new="212" old="news_s9" />
+	<code subjectName="Health" new="227" old="news_s10" />
+	<code subjectName="Medicine" new="310" old="news_s10" />
+	<code subjectName="History" new="236" old="news_s19" />
+	<code subjectName="Research community" new="688" old="news_s11" />
+	<code subjectName="Mathematics" new="302" old="news_s12" />
+	<code subjectName="Microbiology" new="326" old="news_s20" />
+	<code subjectName="Physics" new="441" old="news_s13" />
+	<code subjectName="Physiology" new="443" old="news_s6" />
+	<code subjectName="Developmental Biology" new="136" old="news_s6" />
+	<code subjectName="Policy" new="453" old="news_s14" />
+	<code subjectName="Culture" new="126" old="news_s18" />
+	<code subjectName="Astronomy" new="33" old="news_s15" />
+	<code subjectName="Technology" new="559" old="news_s16" />
+	<code subjectName="Cell biology" new="80" old="news_s23" />
+	<code subjectName="Molecular biology" new="337" old="news_s24" />
+	<code subjectName="Earth Sciences" new="157" old="news_s25" />
+	<code subjectName="Environmental Science" new="172" old="news_s26" />
+	<code subjectName="Evolution" new="181" old="news_s27" />
+	<code subjectName="Physiology" new="443" old="news_s29" />
+	<code subjectName="Developmental Biology" new="136" old="news_s30" />
+	<code subjectName="Carbon nanotubes and fullerenes" new="73" old="nnano_s1" />
+	<code subjectName="Computational nanotechnology" new="115" old="nnano_s2" />
+	<code subjectName="Electronic materials and devices" new="162" old="nnano_s3" />
+	<code subjectName="Molecular machines and motors" new="339" old="nnano_s4" />
+	<code subjectName="Molecular self-assembly" new="341" old="nnano_s5" />
+	<code subjectName="Nanobiotechnology" new="350" old="nnano_s6" />
+	<code subjectName="Nanofluidics" new="351" old="nnano_s7" />
+	<code subjectName="Magnetic materials and devices" new="293" old="nnano_s8" />
+	<code subjectName="Nanoscale materials" new="357" old="nnano_s9" />
+	<code subjectName="Nanomedicine" new="352" old="nnano_s10" />
+	<code subjectName="Instrumentation" new="265" old="nnano_s11" />
+	<code subjectName="Nanoparticles" new="354" old="nnano_s12" />
+	<code subjectName="Nanosensors and other devices" new="356" old="nnano_s13" />
+	<code subjectName="NEMS" new="359" old="nnano_s14" />
+	<code subjectName="Organic-inorganic nanostructures" new="404" old="nnano_s15" />
+	<code subjectName="Nanophotonics" new="355" old="nnano_s16" />
+	<code subjectName="Quantum information" new="481" old="nnano_s17" />
+	<code subjectName="Structural properties" new="537" old="nnano_s18" />
+	<code subjectName="Surface patterning and imaging" new="543" old="nnano_s19" />
+	<code subjectName="Synthesis and processing" new="551" old="nnano_s20" />
+	<code subjectName="Education" new="160" old="nnano_s21" />
+	<code subjectName="Research management" new="496" old="nnano_s21" />
+	<code subjectName="Environmental, health and safety issues" new="170" old="nnano_s22" />
+	<code subjectName="Ethics" new="179" old="nnano_s23" />
+	<code subjectName="Society" new="522" old="nnano_s23" />
+	<code subjectName="Law" new="280" old="nnano_s23" />
+	<code subjectName="Industry" new="253" old="nnano_s24" />
+	<code subjectName="IPR" new="270" old="nnano_s24" />
+	<code subjectName="Analytical chemistry" new="11" old="nchem_s1" />
+	<code subjectName="Biochemistry" new="45" old="nchem_s2" />
+	<code subjectName="Catalysis" new="77" old="nchem_s3" />
+	<code subjectName="Chemical Biology" new="92" old="nchem_s4" />
+	<code subjectName="Electrochemistry" new="161" old="nchem_s5" />
+	<code subjectName="Environmental Chemistry" new="169" old="nchem_s6" />
+	<code subjectName="General chemistry" new="204" old="nchem_s7" />
+	<code subjectName="Green Chemistry" new="224" old="nchem_s8" />
+	<code subjectName="Inorganic Chemistry" new="263" old="nchem_s9" />
+	<code subjectName="Materials Chemistry" new="298" old="nchem_s10" />
+	<code subjectName="Medicinal Chemistry" new="309" old="nchem_s11" />
+	<code subjectName="Nanotechnology" new="358" old="nchem_s12" />
+	<code subjectName="Organic Chemistry" new="403" old="nchem_s13" />
+	<code subjectName="Organometallic Chemistry" new="406" old="nchem_s14" />
+	<code subjectName="Physical Chemistry" new="440" old="nchem_s15" />
+	<code subjectName="Polymer Chemistry" new="455" old="nchem_s16" />
+	<code subjectName="Photochemistry" new="439" old="nchem_s17" />
+	<code subjectName="Supramolecular Chemistry" new="541" old="nchem_s18" />
+	<code subjectName="Surface Chemistry" new="542" old="nchem_s19" />
+	<code subjectName="Synthesis" new="549" old="nchem_s20" />
+	<code subjectName="Theoretical Chemistry" new="563" old="nchem_s21" />
+	<code subjectName="Atmospheric science" new="35" old="ngeo_s1" />
+	<code subjectName="Biogeochemistry" new="47" old="ngeo_s2" />
+	<code subjectName="Climate science" new="106" old="ngeo_s3" />
+	<code subjectName="Hydrology" new="242" old="ngeo_s4" />
+	<code subjectName="Hydrogeology" new="241" old="ngeo_s4" />
+	<code subjectName="Limnology" new="286" old="ngeo_s4" />
+	<code subjectName="Geochemistry" new="209" old="ngeo_s5" />
+	<code subjectName="Geomagnetism" new="214" old="ngeo_s6" />
+	<code subjectName="Palaeomagnetism" new="412" old="ngeo_s6" />
+	<code subjectName="Core processes" new="123" old="ngeo_s6" />
+	<code subjectName="Geomorphology" new="215" old="ngeo_s7" />
+	<code subjectName="Cryospheric science" new="125" old="ngeo_s8" />
+	<code subjectName="Oceanography" new="394" old="ngeo_s9" />
+	<code subjectName="Palaeoclimate" new="413" old="ngeo_s10" />
+	<code subjectName="Planetary sciences" new="445" old="ngeo_s11" />
+	<code subjectName="Seismology" new="508" old="ngeo_s12" />
+	<code subjectName="Structural geology" new="535" old="ngeo_s13" />
+	<code subjectName="tectonics" new="562" old="ngeo_s13" />
+	<code subjectName="Volcanology" new="598" old="ngeo_s14" />
+	<code subjectName="mineralogy" new="330" old="ngeo_s14" />
+	<code subjectName="Palaeontology" new="414" old="ngeo_s15" />
+	<code subjectName="Ecology" new="158" old="ngeo_s16" />
+	<code subjectName="Space physics" new="526" old="ngeo_s17" />
+	<code subjectName="Lasers" new="279" old="nphoton_s1" />
+	<code subjectName="LEDs" new="282" old="nphoton_s1" />
+	<code subjectName="Light sources" new="285" old="nphoton_s1" />
+	<code subjectName="Imaging" new="245" old="nphoton_s2" />
+	<code subjectName="Sensing" new="510" old="nphoton_s2" />
+	<code subjectName="Displays" new="146" old="nphoton_s3" />
+	<code subjectName="Spectroscopy" new="527" old="nphoton_s4" />
+	<code subjectName="Fundamental optical physics" new="192" old="nphoton_s5" />
+	<code subjectName="Quantum optics" new="482" old="nphoton_s6" />
+	<code subjectName="Plasmonics" new="451" old="nphoton_s7" />
+	<code subjectName="Nonlinear optics" new="385" old="nphoton_s8" />
+	<code subjectName="Optoelectronic devices and components" new="401" old="nphoton_s9" />
+	<code subjectName="Optical data storage" new="397" old="nphoton_s10" />
+	<code subjectName="Fibre optics and optical communications" new="187" old="nphoton_s11" />
+	<code subjectName="Solar energy" new="524" old="nphoton_s12" />
+	<code subjectName="Biophotonics" new="55" old="nphoton_s14" />
+	<code subjectName="Ultrafast photonics" new="584" old="nphoton_s15" />
+	<code subjectName="Terahertz technology" new="561" old="nphoton_s16" />
+	<code subjectName="Nanophotonics" new="355" old="nphoton_s17" />
+	<code subjectName="Metals" new="321" old="nmatcode-1" />
+	<code subjectName="Glasses" new="218" old="nmatcode-4" />
+	<code subjectName="Polymers and soft materials" new="456" old="nmatcode-7" />
+	<code subjectName="Biological materials" new="50" old="nmatcode-9" />
+	<code subjectName="Electronic materials and devices" new="162" old="nmatcode-12" />
+	<code subjectName="Optical materials and devices" new="398" old="nmatcode-15" />
+	<code subjectName="Magnetic materials and devices" new="293" old="nmatcode-16" />
+	<code subjectName="Superconductivity" new="540" old="nmatcode-17" />
+	<code subjectName="Superconducting materials" new="539" old="nmatcode-17" />
+	<code subjectName="Mechanical properties" new="303" old="nmatcode-19" />
+	<code subjectName="Catalysis" new="77" old="nmatcode-21" />
+	<code subjectName="Sensors" new="511" old="nmatcode-23" />
+	<code subjectName="Materials for energy" new="299" old="nmatcode-24" />
+	<code subjectName="Surfaces" new="544" old="nmatcode-27" />
+	<code subjectName="Synthesis and assembly" new="550" old="nmatcode-28" />
+	<code subjectName="Astrophysics" new="34" old="nphys_s1" />
+	<code subjectName="Atomic and molecular physics" new="36" old="nphys_s2" />
+	<code subjectName="Biophysics" new="57" old="nphys_s3" />
+	<code subjectName="Chemical physics" new="94" old="nphys_s4" />
+	<code subjectName="Information theory and computation" new="259" old="nphys_s5" />
+	<code subjectName="Electronic materials and devices" new="162" old="nphys_s7" />
+	<code subjectName="Fluid dynamics" new="189" old="nphys_s8" />
+	<code subjectName="Materials Physics" new="300" old="nphys_s9" />
+	<code subjectName="Nanotechnology" new="358" old="nphys_s10" />
+	<code subjectName="Nuclear physics" new="387" old="nphys_s11" />
+	<code subjectName="Optical physics" new="400" old="nphys_s12" />
+	<code subjectName="Other physics" new="408" old="nphys_s13" />
+	<code subjectName="Particle physics" new="419" old="nphys_s14" />
+	<code subjectName="Plasma physics" new="450" old="nphys_s15" />
+	<code subjectName="Quantum physics" new="483" old="nphys_s17" />
+	<code subjectName="Statistical physics, thermodynamics and nonlinear dynamics" new="530" old="nphys_s18" />
+	<code subjectName="Techniques and instrumentation" new="558" old="nphys_s19" />
+	<code subjectName="Geophysics" new="558" old="nphys_s20" />
+</codes>

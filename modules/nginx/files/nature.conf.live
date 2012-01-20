@@ -1,0 +1,62 @@
+#    error_log   /var/log/nginx-overall-access.log;
+#    access_log  /var/log/nginx-overall-error.log;
+#log_format  main  '$remote_addr $host $remote_user [$time_local] "$request" ' '$status $body_bytes_sent "$http_referer" "$http_user_agent" "$gzip_ratio"';
+
+server {
+    listen 8000;
+    server_name www.nature.com;
+    access_log /var/www/nature.com/logs/nginx-access_log main;# buffer=64k;    
+    error_log   /var/www/nature.com/logs/nginx-error_log info;# buffer=32k;
+
+    #Serve static content directly from NFS
+    location ~* ^.+.(jpg|jpeg|gif|css|png|js|ico|txt|srt|swf|zip|rar|xml|rss|rdf)$ { 
+        root  /mnt/fs/Web/NPG/; # the httpdocs folder of your domain 
+        expires           1d; # caching, expire after 1 days 
+    }
+
+    #Default is to proxy to apache
+    location / {
+        proxy_pass http://127.0.0.1:80/;
+    }
+}
+
+server {
+    listen 8000;
+    server_name www.palgrave-journals.com;
+    access_log /var/www/palgrave-journals.com/logs/nginx-access_log main;# buffer=64k;   
+    error_log   /var/www/palgrave-journals.com/logs/nginx-error_log info;# buffer=32k;
+
+        #Serve static content directly from NFS
+    location ~* ^.+.(jpg|jpeg|gif|css|png|js|ico|txt|srt|swf|zip|rar|xml|rss|rdf)$ {
+        root  /mnt/fs/Web/palgrave/; # the httpdocs folder of your domain
+        expires           1d; # caching, expire after 1 days
+    }   
+
+        #Default is to proxy to apache
+    location / {  proxy_pass http://127.0.0.1:80/; }
+
+}
+
+server {
+    listen 8000;
+    server_name www.palgraveconnect.com;
+    access_log /var/www/www.palgraveconnect.com/logs/nginx-access_log main;# buffer=64k;   
+    error_log   /var/www/www.palgraveconnect.com/logs/nginx-error_log info;# buffer=32k;
+
+   
+        #Serve static content directly from NFS
+    location ~* ^.+.(jpg|jpeg|gif|css|png|js|ico|txt|srt|swf|zip|rar|xml|rss|rdf)$ {
+        root  /mnt/fs/Web/palgrave/; # the httpdocs folder of your domain
+        expires           1d; # caching, expire after 1 days
+    }
+
+        #Default is to proxy to apache
+    location / {  proxy_pass http://127.0.0.1:80/; }
+}
+
+#catchall
+server {
+    listen 8000;
+    server_name _;
+    location / { proxy_pass http://127.0.0.1:80/; }
+}

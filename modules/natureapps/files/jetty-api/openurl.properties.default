@@ -1,0 +1,10 @@
+# MarkLogic connection properties
+ml.connection.host=192.168.4.45
+ml.connection.port=8003
+ml.connection.db=Documents
+ml.connection.user=openurl_application_user
+ml.connection.password=oPeN0323
+# OpenSearch address
+opensearch.service.url=http://www.nature.com/opensearch/request
+# velocity view templates:
+resultspage.template.contents=/openurl/results.vm

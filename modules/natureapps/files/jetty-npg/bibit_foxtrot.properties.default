@@ -1,0 +1,77 @@
+#bibit order post URL
+bibitOrderPostURL=https://secure.wp3.rbsworldpay.com:443/jsp/merchant/xml/paymentService.jsp
+
+bibitResponseRedirectHost=https://secure.nature.com
+
+#xml post template
+xml.subscription.order.post.template=/bibit/template/bibitSubscriptionOrderPost.vm
+xml.article.order.post.template=/bibit/template/bibitArticleOrderPost.vm
+
+#Bibit merchant codes to be used for new subscritions
+merchantCode.new.subscription.GBP=ECLIPSE
+pwd.new.subscription.GBP=f$u5uYNd@cat0auV9$AY
+merchantCode.new.subscription.USD=ECLIPSEUSD
+pwd.new.subscription.USD=f$u5uYNd@cat0auV9$AY
+merchantCode.new.subscription.EUR=ECLIPSEEUR
+pwd.new.subscription.EUR=f$u5uYNd@cat0auV9$AY
+
+#Bibit merchant codes to be used for docdel
+merchantCode.docdel.GBP=NATURE
+pwd.docdel.GBP=f$u5uYNd@cat0auV9$AY
+merchantCode.docdel.USD=NATUREUSD
+pwd.docdel.USD=f$u5uYNd@cat0auV9$AY
+merchantCode.docdel.EUR=NATUREEUR
+pwd.docdel.EUR=f$u5uYNd@cat0auV9$AY
+
+
+#post XML DTD
+xml.post.dtd=/bibit/dtd/paymentService_v1.dtd
+
+#response DTD
+xml.response.dtd=/bibit/dtd/paymentService_v1.dtd
+
+macPassword=CHANGEME
+macPasswordEnabled=true
+
+enableMailService=true
+
+enableVatIdValidation=true
+vatCountryList=LV,LU,LT,GB,RO,HU,BG,FR,BE,DE,FI,DK,IE,CZ,AT,CY,SE,SI,SK,UK,IT,MT,PL,PT,GR,ES,NL,EE,EL
+LV.vat.rule=LV[0-9]{11}
+LU.vat.rule=LU[0-9]{8}
+LT.vat.rule=LT([0-9]{9}|[0-9]{12})
+GB.vat.rule=GB([0-9]{3} ?[0-9]{4} ?[0-9]{2}|[0-9]{3} ?[0-9]{4} ?[0-9]{2} ?[0-9]{3}|[A-Z]{2}[0-9]{3})
+RO.vat.rule=RO[0-9]{2,10}
+HU.vat.rule=HU[0-9]{8}
+BG.vat.rule=BG([0-9]{9}|[0-9]{10})
+FR.vat.rule=FR([0-9]{11}|[^OI]{1}[0-9]{10}|[0-9]{1}[^OI]{1}[0-9]{9}|[^OI]{2}[0-9]{9})
+BE.vat.rule=BE([0-9]{9}|[0-9]{10})
+DE.vat.rule=DE[0-9]{9}
+FI.vat.rule=FI[0-9]{8}
+DK.vat.rule=DK[0-9]{8}
+IE.vat.rule=IE([0-9]{7}[A-Z]{1}|[0-9]{1}[A-Z]{1}[0-9]{5}[A-Z]{1})
+CZ.vat.rule=CZ([0-9]{8}|[0-9]{9}|[0-9]{10})
+AT.vat.rule=ATU[0-9]{8}
+CY.vat.rule=CY[0-9]{8}[A-Z]{1}
+SE.vat.rule=SE[0-9]{12}
+SI.vat.rule=SI([0-9]{8}|[A-Z]{8})
+SK.vat.rule=SK[0-9]{10}
+UK.vat.rule=GB([0-9]{3} ?[0-9]{4} ?[0-9]{2}|[0-9]{3} ?[0-9]{4} ?[0-9]{2} ?[0-9]{3}|[A-Z]{2}[0-9]{3})
+IT.vat.rule=IT[0-9]{11}
+MT.vat.rule=MT[0-9]{8}
+PL.vat.rule=PL[0-9]{10}
+PT.vat.rule=PT[0-9]{9}
+GR.vat.rule=GR[0-9]{9}
+ES.vat.rule=ES([A-Z]{1}[0-9]{8}|[0-9]{8}[A-Z]{1}|[A-Z]{1}[0-9]{7}[A-Z]{1})
+NL.vat.rule=NL[0-9]{9}[A-Z]{1}[0-9]{2}
+EE.vat.rule=EE[0-9]{9}
+EL.vat.rule=EL[0-9]{9}
+
+#DEPLOY-85
+merchantCode.new.subscription.YEN=ECLIPSEJPY
+pwd.new.subscription.YEN=xm1@eclipsetest
+
+zipCountryList=UK,US,CA
+UK.zipcode.rule=^[a-zA-Z]{1,2}[0-9][0-9A-Za-z]{0,1} {0,1}[0-9][A-Za-z]{2}$
+US.zipcode.rule=^\\d{5}$
+CA.zipcode.rule=^[ABCEGHJKLMNPRSTVXYabceghjklmnprstvxy]{1}\\d{1}[A-Za-z]{1} ?\\d{1}[A-Za-z]{1}\\d{1}$

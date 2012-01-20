@@ -1,0 +1,113 @@
+hibernate.connection.driver_class=com.microsoft.sqlserver.jdbc.SQLServerDriver
+hibernate.dialect=org.hibernate.dialect.SQLServerDialect
+hibernate.connection.username=app_nature_mobile
+hibernate.connection.password=CHANGEME
+hibernate.connection.url=jdbc:sqlserver://naturedb.nature.com:1433;DatabaseName=nature_mobile;applicationName=liveNatureMobile
+
+
+hibernate.cache.provider_class=com.googlecode.hibernate.memcached.MemcachedCacheProvider
+hibernate.memcached.connectionFactory=KetamaConnectionFactory
+hibernate.memcached.hashAlgorithm=HashAlgorithm.KETAMA_HASH
+#hibernate.memcached.servers=10.1.1.202:11212 10.1.1.203:11212 10.1.1.204:11212
+hibernate.memcached.servers=npgcache1:11211 npgcache2:11211
+hibernate.cache.use_query_cache=false
+hibernate.memcached.dogpilePrevention=true
+#hibernate.show_sql=true
+
+
+hibernate.connection.provider_class=org.hibernate.connection.C3P0ConnectionProvider
+hibernate.c3p0.timeout=1800
+hibernate.c3p0.max_statements=0
+
+
+mobile.max.doi=50
+mobile.create_account.url=http://localhost:7080/api/users
+mobile.epub_download.url=http://localhost:7080/epub_server/epub/download/get_epub
+mobile.get_icons.url=http://localhost:7080/epub_server/epub/download/get_icons
+mobile.default.icon=http://www.nature.com/default-unlocked.jpg
+mobile.pubmed.icon=http://www.nature.com/mobileapps/pubmed.png
+
+#added 
+mobile.doi_lookup.url=http://dx.doi.org/
+mobile.connotea_webcite.url=http://www.connotea.org/webcite
+
+#modified
+
+mobile.pubmed.search=http://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&retmax=10
+mobile.pubmed.idlookup=http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&retmode=xml
+mobile.pubmed.lookup=http://www.ncbi.nlm.nih.gov/pubmed/
+
+mobile.login.redirect=http://www.nature.com/foxtrot/svc/login
+mobile.logout.redirect=http://www.nature.com/foxtrot/svc/logout
+
+mobile.ipaddress.header=NPG_SRC_ADDR
+
+mobile.npg_search.cutoff=2009-08-31
+
+##DEPLOY-377
+#mobile.npg.search.url=http://localhost:7080/opensearch/request?\
+operation=searchRetrieve&recordSchema=pam&sortKeys=publicationDate,pam,0\
+&collection=journals_nature
+
+##commented out for deploy-377
+#mobile.npg.search.url=http://localhost:7080/opensearch/request?operation=searchRetrieve&recordPacking=xml&recordSchema=pam&sortKeys=publicationDate,pam,0&collection=journals_nature,crawled_content,-journals_palgrave,-lab_animal&entry=platform
+
+mobile.npg.search.max=500
+mobile.npg.search.batch=100
+mobile.npg.search.cache.age=3600
+mobile.npg.search.cache.timeout=500
+mobile.npg.search.timeout=10000
+
+mobile.signedrequest.secretcode=iamasecret
+mobile.acs.foxtrot.authorize.url=http://www.nature.com/accesscontrol
+mobile.acs.foxtrot.authorize.timeout=5
+mobile.acs.foxtrot.authorize.batch=60
+
+mobile.arxiv.icon=http://www.nature.com/mobileapps/assets/images/arxiv.png
+mobile.arxiv.lookup=http://arxiv.org/abs/
+mobile.arxiv.search=http://export.arxiv.org/api/query
+
+mobile.epub.assets=style.css::http://www.nature.com/mobileapps/assets/style/epub_style.css,droid_serif-webfont.svg::http://www.nature.com/mobileapps/assets/style/droid_serif-webfont.svg
+
+#maps to source.productGroup.code! 
+mobile.defaultsources=npg:nature,news,ncomms;sciam:sciam
+
+#####COMMENTED OUT FOR ACCESSCONTROL ISSUE
+#mobile.acs.overrides=clientRequestSignature.equals(@com.nature.service.request.Signature@IPAD_1_1) \
+#&& @java.text.DateFormat@getDateInstance(3).parse('09/01/2010').after(new java.util.Date()) ? 'nature,news,ncomms':''\
+#::clientRequestSignature.equals(@com.nature.service.request.Signature@SCIAM_IPHONE_1_0) \
+#&& @java.text.DateFormat@getDateInstance(3).parse('09/01/2010').after(new java.util.Date()) ? 'scientificamerican':''
+
+#####ADDED FOR ACCESSCONTROL ISSUE Commented out for DEPLOY-377
+#mobile.acs.overrides=clientRequestSignature.equals(@com.nature.service.request.Signature@IPHONE_1_0) \
+#&& @java.text.DateFormat@getDateInstance(3).parse('12/31/2010').after(new java.util.Date()) ? 'nature,news':'' \
+#::clientRequestSignature.equals(@com.nature.service.request.Signature@IPAD_1_1) \
+#&& @java.text.DateFormat@getDateInstance(3).parse('12/31/2010').after(new java.util.Date()) ? 'nature,news,ncomms':''\
+#::clientRequestSignature.equals(@com.nature.service.request.Signature@SCIAM_IPHONE_1_0) \
+#&& @java.text.DateFormat@getDateInstance(3).parse('12/31/2010').after(new java.util.Date()) ? 'scientificamerican':''
+
+##DEPLOY-377 & IT-8743
+#mobile.acs.overrides=clientRequestSignature.equals(@com.nature.service.request.Signature@IPAD_1_1) \
+&& @java.text.DateFormat@getDateInstance(3).parse('03/31/2011').after(new java.util.Date()) ? 'nature,news':''\
+::clientRequestSignature.equals(@com.nature.service.request.Signature@SCIAM_IPHONE_1_0) \
+&& @java.text.DateFormat@getDateInstance(3).parse('03/31/2011').after(new java.util.Date()) ? 'scientificamerican':''
+
+
+mobile.webresources.debug=false
+mobile.webresources.connect_timeout=3000
+mobile.webresources.read_timeout=60000
+
+mobile.covers.root.url=http://www.nature.com
+mobile.covers.expr=currentIssuePath + "covers/" + "appcover-" + pcode + "-" + currentVolume + "-" + currentNumber + "-"
+
+mobile.services.outbound.threads.max=5
+
+mobile.acs.overrides=clientRequestSignature.clientVersion.equals('1.1.ipad') && @java.text.DateFormat@getDateInstance(3).parse('03/31/2011').after(new java.util.Date()) ? 'nature,news':''::clientRequestSignature.clientVersion.equals('1.0.iphone.sciam') && @java.text.DateFormat@getDateInstance(3).parse('03/31/2011').after(new java.util.Date()) ? 'scientificamerican':''
+
+#DEPLOY-610
+mobile.issues.url=http://localhost:7080/epub_server/epub/rest/opds/
+mobile.npg.search.url=http://localhost:7080/opensearch/request?interface=mobile&sortKeys=publicationDate,pam,0
+
+#DEPLOY-622
+mobile.npg.cache.concurrency=16
+mobile.npg.cache.l1.age=60

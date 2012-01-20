@@ -1,0 +1,12 @@
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+hibernate.connection.driver_class=com.mysql.jdbc.Driver
+hibernate.connection.url=jdbc:mysql://192.168.4.67:3306/press_site?useEncoding=true&characterEncoding=UTF-8
+hibernate.connection.username=press_site
+hibernate.connection.password=CHANGEME
+
+press.docBase=/mnt/fs/Web/NPG
+press.mailserver=babylon.nature.com
+
+#DEPLOY-444
+press.ftp.location=/mnt/fs/Web/NPG/press/asset
+content.delivery.pdf.caching.enabled=false

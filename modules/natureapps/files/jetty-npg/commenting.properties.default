@@ -1,0 +1,70 @@
+# This property files sets up the following:
+#   1. JDBC connection to MySQL Grapevine Database
+#   2. JDBC connection to MsSQL DynaSearch database
+#   3. Grapevine API (URL) call for request for comment moderation moderator nofication
+#   3. Email alert setup for application problem notification. Email address for receiver is added here.
+#   4. Setup for memcaching.
+#
+#  commenting.properties file is moved out from commenting.war
+#  and be placed in folder
+#
+#     /usr/local/jetty-npg/etc
+#
+## ---- live environment ------
+
+# Note: this is not really for News. These are the names used by component.jar
+poolNewsJdbcUrl=jdbc:mysql://192.168.4.67:3306/articling_production?autoReconnect=true
+poolNewsDriverClass=com.mysql.jdbc.Driver
+poolNewsUser=news_production
+poolNewsPassword=CHANGEME
+
+## ---- msSQL for Staging environment ---------
+
+poolDriverClass=com.microsoft.jdbc.sqlserver.SQLServerDriver
+poolJdbcUrl=jdbc:sqlserver://naturedb.nature.com:1433;DatabaseName=DynaSearch;applicationName=liveCommenting
+poolUser=app_commenting
+poolPassword=CHANGEME
+poolMinPoolSize=5
+poolMaxIdleTime=1000
+poolTestConnection=70
+poolMaxPoolSize=35
+poolMaxAge=0
+poolInitialPoolSize=10
+poolCheckoutTimeout=4000
+
+
+# --- this is used for memcached
+#cacheServers=cacheServers=10.1.1.14:11212|10.1.1.18:11212|10.1.1.33:11212
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+#cacheServers=192.168.10.111:11211|192.168.10.112:11211
+#cacheServers=10.1.1.111:11211
+cacheServers=npgcache1:11211|npgcache2:11211
+cache.memcacheClient= ##if set to 'danga' danga client will be used. Default is spy memcahced.
+cache.enabled=true ## be default true. set 'false' to disable
+##if not set defaults to '3' sec.
+cache.timeOutInSec=3
+
+#---- notify problem alert recipients when problem occurs ----
+email.service.host=babylon.nature.com
+problem.alert.email.from=Commenting API Alert <donotreply@natureny.com>
+problem.alert.email.to=r.medalla@natureny.com
+problem.alert.email.subject=Problem on Commenting API (Live Environment)
+
+
+#---- GRAPEVINE API FOR STAGING --------
+# this api call requests grapevine to send email notification to moderator for moderation request
+mail.service.url=http://grapevine.nature.com/api/notify_new_moderation/
+mail.mconfirmation.service.url=http://grapevine.nature.com/api/send_moderation_confirmation_email/
+
+#--- Moderation confirmation email ----
+mconfirmation.email.from=donotreply@natureny.com
+mconfirmation.email.subject=Report a comment confirmation
+mconfirmation.email.message=Thank you for reporting a comment at our website. The moderator will let you know the \
+  outcome of your complaint as soon as possible.
+
+#---- MARKLOGIC CALL ----
+marklogic.url=http://localhost:7080/contentstore_query/execute
+marklogic.user=foxtrot_web_user
+marklogic.password=CHANGEME
+environment=live
+marklogic.charleston.url=http://localhost:7080/charleston_document/document

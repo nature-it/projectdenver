@@ -1,0 +1,6 @@
+# ------------------
+# Loggers properties
+# ------------------
+
+.level=WARNING
+

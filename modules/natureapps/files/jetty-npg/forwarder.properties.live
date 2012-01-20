@@ -1,0 +1,5 @@
+host.name = http://localhost:7080
+readcube.referer = http://readcube.com
+content.length = 0
+http.socket.timeout = 10000
+http.connection.timeout = 10000

@@ -1,0 +1,41 @@
+#allow 96.57.111.0/24; #scott
+allow 195.138.194.0/24;
+allow 195.138.194.0/24;
+allow 194.129.50.189;
+allow 172.26.0.0/16;
+allow 172.25.2.0/24;
+allow 194.129.50.164;
+allow 65.201.138.2;
+allow 66.228.83.75;
+allow 194.178.120.0/24;  # BIBIT
+allow 155.136.66.0/24; # BIBIT
+allow 66.228.83.116;  #IT-3251
+allow 63.64.195.2;
+allow 170.224.106.0/24;
+allow 65.199.186.2;
+allow 24.184.44.72;
+allow 69.253.44.235;
+allow 192.168.0.0/16;
+allow 195.188.237.0/24;
+allow 195.188.238.0/24;
+allow 83.137.211.0/24;
+allow 83.137.214.0/24;
+allow 89.206.148.0/24;
+allow 83.137.208.0/24; #IT-155
+allow 64.131.191.145; # caitlin from home
+allow 202.54.243.228;
+##Allow OAI test sites in
+allow 128.84.154.156;
+allow 132.236.180.49;
+allow 210.151.240.82; # japan
+allow 74.208.46.181; # brainysoftware
+allow 68.162.253.0/24; # Thoughtbot Boston
+allow 216.254.85.209; # Thoughtbot NYC
+allow 125.103.228.204; # IT-3114 Japan
+allow 216.64.169.240; # WebTrends - IT-3383
+allow 132.174.124.3; # OpenSearch IT-3801
+allow 122.160.227.17; # MPS India
+allow 203.200.189.6; # TCS Offshore 1
+allow 203.197.96.43;# TCS Offshore 2
+allow 207.218.230.114;  # ci.thoughtbot.com
+

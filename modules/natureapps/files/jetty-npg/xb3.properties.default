@@ -1,0 +1,169 @@
+#Fri Nov 21 12:02:56 EST 2008
+# Data sources
+# Velocity
+file.resource.loader.cache=true
+file.resource.loader.class=org.apache.velocity.runtime.resource.loader.FileResourceLoader
+file.resource.loader.modificationCheckInterval=2
+file.resource.loader.path=/mnt/fs/Web/NPG
+file.resource.loader.description=Velocity File Resource Loader
+runtime.log.logsystem.class=org.apache.velocity.runtime.log.Log4JLogChute
+velocimacro.library=/common/macros/VM_accessible_library.vm, /common/macros/VM_global_library.vm, /common/macros/VM_html_library.vm, /common/macros/VM_news_library.vm
+runtime.log=/tmp/velocity_xb3.log
+runtime.log.level=WARN
+userdirective=com.nature.xb3.velocity.directives.ConditionalParse
+resource.loader=file
+# SQL server
+poolUser=app_foxtrot_nature
+poolPassword=CHANGEME
+poolJdbcUrl=jdbc:sqlserver://naturedb.nj-ws.nature.com:1433;DatabaseName=Reg_Data;applicationName\=liveNews
+poolTestConnection=70
+poolMaxPoolSize=35
+poolMaxAge=0
+poolInitialPoolSize=10
+poolDriverClass=com.microsoft.jdbc.sqlserver.SQLServerDriver
+poolMinPoolSize=5
+poolCheckoutTimeout=5000
+poolMaxIdleTime=1000
+# MySQL
+poolNewsUser=news_production
+poolNewsPassword=CHANGEME
+poolNewsJdbcUrl=jdbc:mysql://192.168.4.67:3306/articling_production?useOldAliasMetadataBehavior=true
+poolNewsDriverClass=com.mysql.jdbc.Driver
+# Grapevine
+poolGrapevineUser=news_production
+poolGrapevinePassword=CHANGEME
+poolGrapevineJdbcUrl=jdbc:mysql://192.168.4.67:3306/articling_production
+poolGrapevineDriverClass=com.mysql.jdbc.Driver
+# Marklogic
+xccurl=xcc://xb3user:xBT27_archiveit@192.168.4.45:8003/
+# SOLR
+solrUrl=http://192.168.4.52:8081/newssearch/select/
+# Other services
+#NIndiaRecommendedPapersFeedUrl=http://spotlight.nature.com/nindia/papers/feed
+NIndiaRecommendedPapersFeedUrl=http\://spotlight.nature.com/products/nindia/papers.rss
+TechnoratiUrl=http://api.technorati.com/cosmos?key\=c1ae53673570299354bf707f42396f1b&url\=http://www.nature.com/news&current\=yes&type\=link&format\=rss
+NatureBlog=http://blogs.nature.com/news/thegreatbeyond/the_great_beyond.rdf
+articlinghost=http://localhost\:7080/api
+NIndiaEditorBlogFeedUrl=http://blogs.nature.com/indigenus/indigenus.rdf
+articlingarticleapi=/article/doi/
+NatureNetwork=http://network.nature.com/people/api_create
+pceHost=http://pubadmin.nature.com/pce
+searchurl=http://192.168.4.52\:8081/newssearch/select/
+xmlAuthorHost=http://pubadmin.nature.com/pce/news/api/author/
+npg.standard.host=http://www.nature.com
+mainHost=http://www.nature.com
+xmlservice=
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+#cacheServers=10.1.1.201:11213|10.1.1.39:11213
+cacheServers=npgcache1:11212|npgcache2:11212
+#cacheServers=npgcache1:11212|npgcache2:11212
+NIndiaForumFeedUrl=http://network.nature.com/forums/natureindia/feed
+SAFeedUrl=http://rss.sciam.com/ScientificAmerican-News
+#npg.naturejobs.host=http://localhost:7380/naturejobs/science
+npg.naturejobs.host=http://www.nature.com/naturejobs/science
+# commenting (not commenting api)
+commenting_db_point_to_live=YES
+commenting_db_username=news_production
+commenting_db_password=CHANGEME
+commenting_db_JdbcUrl=jdbc:mysql://192.168.4.67:3306/articling_production
+# Other XB3 stuff
+input.encoding=UTF-8
+output.encoding=UTF-8
+docroot=/mnt/fs/Web/NPG
+nature.pdfroot=/mnt/fs/Web/NPG
+foxtrotUser=/users/
+## Required by Foxtrot aka nature.jar
+# Marklogic 
+marklogic.url=http://localhost:7080/contentstore_query/execute
+marklogic.user=foxtrot_web_user
+marklogic.password=CHANGEME
+environment=live
+# innocentive
+innocentive.product.challenge.snippet.count=2
+innocentive.challenge.snippet.count=2
+innocentive.nature.pavilion.page.size=2
+trackbacks.enabled=1
+trackbacks.cache.refresh=1
+npg.tango.host=http://bogus.com
+# bibit
+bibitConfigFile=bibit_foxtrot
+# commenting api
+npg.commenting.url=http://localhost:7080/commenting
+npg.trackback.url=http://production-blogs.nature.com/posts.rss?doi=
+npg.allow.comment.url=http://localhost:7080/commenting/active/doi/
+npg.user.allow.comment.url=http://localhost:7080/commenting/users/show/
+#athens
+#athensconfig=/config/athens/atacamaConfig_athens.xml
+#shibbolethConfig=/config/shibboleth/atacamaConfig_Shibboleth.xml
+
+athensConfig=/mnt/fs/Web/NPG/openathens1-2-1/AtacamaBaseConfigAthens.xml
+shibbolethConfig=/mnt/fs/Web/NPG/openathens1-2-1/AtacamaBaseConfigUKFed.xml
+
+# other
+npg.nboss.mailserver=babylon.nj-ws.nature.com
+npg.nboss.docbase=/mnt/fs/Web/NPG
+npg.nboss.newsfile=/mnt/fs/Web/NPG/templates/press_config/Dataout.xml
+npg.nboss.helpfile=/mnt/fs/Web/NPG/templates/press_config/helptext.xml
+#npg.naturejobs.host=http://localhost:7380/naturejobs/science
+npg.naturejobs.host=http://www.nature.com/naturejobs/science
+npg.isnsearch.host=
+npg.standard.host=http://www.nature.com
+npg.natureprotocols.host=http://www.nature.com/protocols
+personal.user.max.concurrency.limit=10
+os.name=
+ArticleDate=2009-09-01T00:00:00Z
+
+#DEPLOY-158
+#npg.nn.create.user.url=http://network.nature.com/people.xml
+npg.nn.create.user.url=http://network.nature.com/users/api_create
+npg.nn.get.user.url=http://network.nature.com/profile.xml
+npg.nn.api.timeout=8000
+npg.nn.api.username=9dec4e34e217c63d4a01f0caea7b614b7fada508
+npg.nn.api.password=e8e8e05af1126223a6406609ade50c4b9b55c4d6 
+scopus_message_location=/usr/local/jetty-npg/etc/scopus.msg
+athens.resource.name=NPG_COM
+amr_message_location=/usr/local/jetty-npg/etc/thomson.msg
+uri.site=http://www.nature.com
+exutors.fixed.pool.size=30
+webtrends.service.timeout=3000
+webtrends.dcsid=dcs0zztfg00000s969s37qoal_2f6z
+webtrends.events.service.baseUrl=http://dc.webtrends.com/v1/${dcsid}/events.svc
+webtrends.id.service.baseUrl=http://dc.webtrends.com/v1/${dcsid}/ids.svc
+ppvServiceEnabled=true
+ppvServiceURL=http://www.nature.com/jitterbug/process-order/@licenseId@
+#
+#content.store.uri=/@product@/journal/@volume@/@issue@/xml/@contentId@
+content.store.uri=/dev-ingest/mnt/fs/Web/NPG/@product@/journal/@volume@/@issue@/xml/@contentId@
+
+NmiddleeastEditorBlogFeedUrl=http://blogs.nature.com/houseofwisdom/houseofwisdom.rdf
+NmiddleeastForumFeedUrl=http://network.nature.com/forums/nmiddleeast/feed
+marklogic.charleston.url=http://localhost:7080/charleston_document/document
+
+cookie.domain=.nature.com
+
+enableAccess=true
+
+#DEPLOY-354
+natureevents.eotw.url=http://www.nature.com/natureevents/science/audiences/<JOURNAL_CODE>.xml?eotw=true
+natureevents.em.url=http://www.nature.com/natureevents/science/audiences/<JOURNAL_CODE>.xml?event_match=true
+webtrends.serverside.enabled=true
+
+#DEPLOY-386
+httpclient.tools.timeout=3000
+
+#DEPLOY-431
+marklogic.host=192.168.4.45
+marklogic.port=8003
+marklogic.db=Documents
+
+captcha.public.key =6LdH4r0SAAAAAJkZvUwkI7zPCKoguxJpcdYdGz2R
+captcha.private.key=6LdH4r0SAAAAAHUy8SJYtUUmRK29ufOi4ddHAgjp
+
+jitterbugDecisionTree=true
+jitterbugPpvServiceURL=http://www.nature.com/jitterbug/process-order-by-site-id/@siteId@/@journalCode@
+
+#DEPLOY-550
+DummyLogger.interval.hour=12
+wurfl.file.path=/mnt/fs/web/npg/wurfl/wurfl.zip
+pegasus.securekeys.public.key.path=/mnt/fs/Web/NPG/securekeys/pwd/npg.der
+mpsinsight.sso.redirect.url=[https://www.mpsinsight.com/]

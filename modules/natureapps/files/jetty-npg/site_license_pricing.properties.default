@@ -1,0 +1,17 @@
+marklogic.host=192.168.4.45
+marklogic.url=http://localhost:7080/contentstore_query/execute
+marklogic.port=8003
+marklogic.db=Documents
+marklogic.user=foxtrot_web_user
+marklogic.password=CHANGEME
+environment=live
+marklogic.charleston.url=http://localhost:7080/charleston_document/document
+
+/#similar values to be mentioned inside memcache.property file in etc folder
+default.marklogic.date.interval=120m
+latest.sitelicense.pricing.results.date.interval=120m
+
+cache.interval.config.filename=cache.interval
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11211|npgcache2:11211
+current.year=2011

@@ -1,0 +1,13 @@
+hibernate.connection.username=naturenetwork
+hibernate.connection.password=CHANGEME
+hibernate.connection.driver_class=com.mysql.jdbc.Driver
+hibernate.connection.url=jdbc:mysql://192.168.4.67:3306/SSF?zeroDateTimeBehavior=convertToNull&autoReconnect=true
+hibernate.cache.provider_class=org.hibernate.cache.NoCacheProvider
+hibernate.c3p0.acquire_increment=3
+hibernate.c3p0.idle_test_period=300
+hibernate.c3p0.timeout=0
+hibernate.c3p0.max_size=60
+hibernate.c3p0.max_statements=50
+hibernate.c3p0.min_size=10
+hibernate.dialect=org.hibernate.dialect.MySQLDialect
+jpa.socialapi.unitname=nature-network

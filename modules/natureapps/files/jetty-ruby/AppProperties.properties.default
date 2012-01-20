@@ -1,0 +1,617 @@
+######### All the properties in Nature Network Application Version 3.1.1 ##########
+
+#################### constant properties starts ###################################
+
+MAIL_SMTP_HOST=babylon.nature.com
+PATTERN_EMAIL=.*[a-zA-Z]+.*@.+\\.[a-z]+
+PATTERN_PASSWORD=.*[a-z].*,,.*[A-Z].*,,.*[0-9].*,,.*[\\[\\]\\{\\}!@#$%^&*?_~\\-(,)\\.'\"`\\\\/].*
+PASSWORD_MIN_LENGTH=8
+FRIEND_FEED_URL=friendfeed.com
+FRIEND_FEED_PORT=80
+BASE_URL=http://network.nature.com/
+
+#################### All Openfire related entries ##########################
+OPENFIRE_SERVER_ADDRESS=inkolvmcent01.tcskolkata.co.in
+OPENFIRE_SERVER_PORT=5222
+OPENFIRE_FLAG=N
+
+#################### All Marklogic related entries ##########################
+MARK_LOGIC_USER=network
+MARK_LOGIC_PASSWORD=Ts25j93
+MARK_LOGIC_ROOT=/NN/
+MARK_LOGIC_ENV=live
+MARK_LOGIC_CENTRAL_SYSTEM_CONTEXT_URL=http://www.nature.com/contentstore_query
+MARK_LOGIC_AVAILABLE=true
+MARK_LOGIC_DATABASE=naturenetwork
+SYSTEM_EMAIL_ID=needtofillthis@needtofillthis.com
+
+#################### Memcached Server ##########################
+################# This property should have value in the pattern IP1:PORT1;IP2:PORT2 ########################
+################# N.B: The separator to be used is semicolon (;) ####################### 
+#CACHE_SERVERS=10.1.1.202:11212;10.1.1.203:11212;10.1.1.204:11212
+CACHE_SERVERS=npgcache1:11211;npgcache2:11211
+
+SYSTEM_USER_ID=-99
+NATURE.COM.USER.BASEURL=https://secure.nature.com/rest/users
+NATURE.COM.USER.RECOVERPASSWORD=http://www.nature.com/nams/svc/lostpassword
+IMAGE_UPLOAD_PATH=/mnt/fs/Web/NPG/nn/uploaded_images/user/
+IMAGE_PATH_CONSTANT=http://network.nature.com/system/user/
+GROUP_IMAGE_PATH_CONSTANT=http://network.nature.com/system/group/
+GADGET_IMAGE_UPLOAD_PATH=/mnt/fs/Web/NPG/nn/uploaded_images/gadgets/
+GADGET_IMAGE_PATH_CONSTANT=http://network.nature.com/system/gadgets/
+PROXY_INCLUDE_FLAG=N
+PROXY_IP=
+PROXY_PORT=
+URL_TIME_OUT=5000
+CITEULIKE_FEED_URL_PATTERN=http://www.citeulike.org/rss/user/userID
+CONNOTEA_FEED_URL_PATTERN=http://www.connotea.org/rss/user/userID
+DELICIOUS_FEED_URL_PATTERN=http://feeds.delicious.com/v2/rss/userID?count=5
+FRIENDFEED_FEED_URL_PATTERN=http://friendfeed.com/userID?format=atom&start=0&num=5
+TWITTER_USER_ID_URL=http://twitter.com/users/show/userID.xml
+TWITTER_FEED_URL_PATTERN=http://twitter.com/statuses/user_timeline/userID.rss
+CITEULIKE_PROFILE_URL_PATTERN=http://www.citeulike.org/profile/$0
+CONNOTEA_PROFILE_URL_PATTERN=http://www.connotea.org/wiki/User:$0
+DELICIOUS_PROFILE_URL_PATTERN=http://delicious.com/$0
+FRIENDFEED_PROFILE_URL_PATTERN=http://friendfeed.com/$0
+TWITTER_PROFILE_URL_PATTERN=http://twitter.com/$0
+CONNOTEA_SITE_NAME=Connotea
+TWITTER_SITE_NAME=Twitter
+DELICIOUS_SITE_NAME=Delicious
+FRIENDFEED_SITE_NAME=FriendFeed
+CITEULIKE_SITE_NAME=CiteULike
+SYNOPSIS_RATIO=18
+BLOG_RATIO=5
+WEBSITE_RATIO=5
+NETWORKING_SITE_RATIO=5
+EDUCATION_RATIO=12
+JOB_RATIO=10
+PROJECT_RATIO=5
+SKILL_RATIO=5
+PUBLICATION_RATIO=7.5
+AWARD_RATIO=7.5
+AFFILIATION_RATIO=5
+IMAGE_RATIO=10
+OBJECTIVE_RATIO=5
+PUBMED_URL=http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?tool=bioruby&db=pubmed&retmode=xml&rettype=medline&id=
+DOI_URL=http://doi.crossref.org/servlet/query?usr=nature&pwd=crpw364&type=d&format=unixref&qdata=
+QA_URI=/nature-network/qa/$type/$id
+QA_PATH=/nature-network/qa/
+OAUTH_REQUEST_TOKEN_URL=http://network.nature.com/java/oauth/requestToken
+OAUTH_ACCESS_TOKEN_URL=http://network.nature.com/java/oauth/accessToken
+OAUTH_AUTHORIZE_URL=http://network.nature.com/java/oauth/authorize
+OAUTH_SERVICE_PROVIDER_NAME=network.nature.com
+APP_SERVER_HOST=localhost
+APP_JETTY_PORT=7380
+STATIC_ASSETS_PATH=/mnt/fs/web/NPG/nn/assets
+SYSTEM_ERROR_MESSAGE=An error has occured. Please contact system administrator or try later.
+send.message.link=http://network.nature.com/people/$0/messages/new
+location.update.link=http://network.nature.com/people/$0/location
+ENABLE_GADGET_CACHING=Y
+MAX_UPLOAD_FILE_SIZE_IN_BYTE=512000
+IMAGE_UPLOAD_ERROR_MESSAGE=Image size cannot be larger than 500 KB
+current.affiliation.text= This is my current job
+SIGNING_KEY_FILE_NAME=oauthkey.pem
+SIGNING_KEY_NAME=defaultPubkey
+SIGNING_KEY_FOLDER_NAME=NN_Cert
+DEFAULT_CONSUMER_KEY=network.nature.com
+OAUTH_CONFIG_FILE=oauth.json
+RSA_CERTIFICATE_FILE_NAME=rsacert.pem
+#################### constant properties starts ###################################
+############ Please set the Environment as DEV/BETA/TEST/PROD ###############
+NATURE_ENVIRONMNET=PROD
+test.recipient.mail=NPG-Network-QA@macmillan.com
+beta.recipient.mail=NPG-Network-QA@macmillan.com
+dev.recipient.mail=NPG-Network-QA@macmillan.com
+############ Please set the Environment as DEV/BETA/TEST/PROD ###############
+
+#################### resource properties starts ###################################
+
+#Paging constants
+pager.records.count=10
+pager.sets.count=10
+
+# MEMCACHED
+cache.memcached.initConn.count=10
+cache.memcached.minConn.count=5
+cache.memcached.maintSleep.count=30
+cache.memcached.socketTO.count=3000
+cache.memcached.maxConn.count=250
+
+#QA Latest Question/Answer Interval
+qa.latest.interval=31
+
+#################### resource properties ends ####################################
+
+#################### text properties starts ######################################
+
+err01=The user id given by you is not valid.
+err02=The password given by you is not valid.
+err03=Person not found
+err04=Activity not found
+
+## People Tracker page starts
+label.tracker.people=People
+label.track.user=track a user
+label.following.user=Following
+label.followers.user=Followers
+people.tracker.feed.title=People Tracker
+people.tracker.feed.link=http://network.nature.com/
+people.tracker.feed.titledesc=People Tracker updates
+people.tracker.follow=follow
+
+## People Tracker page ends
+
+## My Network page starts
+invite.to.type=Invitation
+email.type.invite=invitation
+mynetwork.invite.accept=Accept
+mynetwork.invite.decline=Decline
+mynetwork.invite.block=Blocked
+mynetwork.invite.pending=Pending
+mynetwork.contact=Contact
+
+## latest activity period of friends or following users
+activity.latest.duration=30
+## all activity of single user
+activity.singleuser.duration=200000
+
+mynetwork.message.body=Hi\, I would like to invite you to my Nature Network 
+mynetwork.message.subject=Join my network on Nature Network
+recommendation.type.tracker=Tracker
+recommendation.type.network=Network
+recommended.list.size=20
+
+## My Network page ends
+
+## page Header
+label.UserLogin.success=Successfully logged in
+
+## Email for registration
+
+mail.register.body=Your account has been successfully registered. Please click the following link<br/> <a href=\"{0}\">{1}</a> <br/>to activate your account
+mail.register.subject=Account activation mail from Nature Network
+
+## Error messages 
+
+error.loginurl.blank=Login Url can not be blank
+error.password.blank=Password can not be blank
+error.firstName.blank=First Name cannot be blank
+error.lastName.blank=Last Name cannot be blank
+error.urlFirstName.blank=URL First Name cannot be blank
+error.urlLastName.blank=URL Last Name cannot be blank
+error.email.blank=Email cannot be blank
+error.email.invalid=Please provide a valid email address
+error.password.invalid=Password must have at least an upper case character\, a lower case character and a number
+error.password.length=Password must be of at least 6 characters
+error.repassword.blank=Re Type Password cannot be blank
+error.password.mismatch=Password doesn't match with ReType Password
+error.termsAndConditions.unchecked=Please check the terms and conditions
+error.captcha.blank=Please enter the captcha text
+error.alreadyPresent.urlFirstNameLastName=Please specify a different URL First and Last Name
+error.alreadyPresent.email=A user with that email already exists. If this is your email address sign in, or obtain a new password if you have forgotten it
+error.captcha.incorrect=Please enter the correct captcha text
+error.notActivated.user=Your Account is not activated yet.
+error.notValid.userAccount=You don't have account in the site yet.Please register.
+error.notValid.userAccountOrPassword=Your user account or password is invalid.
+error.FriendFeed.incorrectUserIDOrPassword=You Have provided an incorrect user Id or Password
+error.Twitter.incorrectUserIDOrPassword=You Have provided an incorrect user Id or Password
+error.canNot.trackU=User can not track yourself
+error.already.track=User may already been tracked
+error.user.privilege=You do not have sufficient privileges to visit this page
+error.uuid.invalid=User Id/ UUID can not be null or empty.
+error.activityType.undefined=Activity type is undefined
+error.stop.track=Can not stop track\, provide valid uri
+error.password.match=Confirm Password field doesn't match the password
+error.invalid.url=The url you have entered is invalid
+error.key.invalid=The key provided does not exist
+error.tempPass.invalid=The temporary password you have entered does not match the password provided to you in the email
+error.login.invalid=Invalid Username or Password. Please try again!
+error.registered.both=You have already registered with Nature Network. Please login to proceed.
+
+label.login.id=Log In
+label.email.id=Email Id
+label.site.password=Password
+label.first.name=First Name
+label.middle.name=Middle Name
+label.last.name=Last Name
+label.email.address=Email Address
+label.email.password.retype=Re Type Password
+label.area.of.inerest=Area Of Interest
+label.url.first.name=Url First Name
+label.url.last.name=Url Last Name
+label.captcha.text=Captcha Text
+label.terms.conditions=Terms And Conditions
+label.site.register=Register
+label.captcha.tryagain=Try Again
+label.trackSearch.user=Nullam ultrices\, magna non sodales pulvinar\, nulla eros pretium sapien\, in dictum tortor diam eu mauris. In a dui.
+label.people.tracker=People Tracker
+label.people.tag=People &amp; Tags
+label.activity.notfound=No Such Activity found.
+label.user.invite=Invite
+label.common.more=more
+label.notfollowing.user=You are not Following anybody.
+label.notfollowed.user=You are not Followed by anybody.
+label.all.tags=All Tags:
+label.my.tags=Your Tags:
+label.site.rememberMe=Remember me on this computer.
+label.site.forgotuserpass=Forgor your <a href="/forgotUserID">User ID</a> or <a href="/forgotPassword">Password</a>?
+label.site.newcreate=New to Nature websites? <a href="/register">Create an account</a>.
+label.login.invalid=Either you User ID or Password are invalid. To return to the log in screen and try again\, click Ok.<br/><br/>If you have forgotten your User ID or password\, click OK and then select the link underneath the User and password fields that says\, 'Forgot your User Id or Password?'
+label.invalidLogin.OK=OK
+label.email.enter=Please enter your email address:
+label.email.confirm=Please confirm your email address: 
+label.send=Send
+mail.forgotuser.subject=User ID request for your Nature Network account
+mail.forgotuser.message=Hello {0}\,<br/>This e-mail has been sent in response to your request to receive your NatureNetworks Account User ID (request IP: {1}).<br/>Your Nature Network Users ID is {2}.<br/>Click <a href=\"{3}\">{4}</a>\, to return to Nature Network Sign-In page<br/> If you have questions for our Customer Service or Technical Support team\, please visit our Customer Support site.<br/><br/>Sincerely\,<br/>NatureNetwork Customer Support <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+error.blank.email=Email cannot be blank
+error.notPresent.email=The email you have provided does not exist
+forgot.user.info=Forgot your User ID? Please enter your email address below and we will send you an email with User ID identification instructions in the next few minutes.
+forgot.pass.info=Forgot your password? Please enter your email address below and we will send you an email with password reset instructions in the next few minutes.
+mail.forgotpass.subject=Password reset request for your Nature Network account
+mail.forgotpass.message=Hello {0}\,<br/> This e-mail has been sent in response to your request to reset your NatureNetwork Account password (request IP: {1}). If you remember your<br/> password\, there is no need to reset it and you can ignore this e-mail.<br/> If you forgot your password and need to reset it\, please click on the following link and enter the temporary password provided below:<br/> Temporary Password: {2}.<br/> <a href=\"{3}\">{4}</a> <br/> If you have difficulties with clicking on the link\, you can also copy the address above into your browser's address field and click 'Enter'.<br/> If you have questions for our Customer Service or Technical Support team\, please visit our Customer Support site.<br/><br/> Sincerely\,<br/> NatureNetwork Customer Support <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+change.pass.info=Change Your Password:<br/> Please enter your temporary password that was sent to you via email and the enter you new password and confirm.
+label.tempPass.enter=Temporary Password
+label.newPass.enter=New Password
+label.confirmPass.enter=Confirm
+label.change=Change
+
+label.welcome.back=Welcome back to Nature Network
+label.new.nature.websites=New to Nature websites?
+label.forgot.your=Forgot your
+label.signin.title=Sign In
+label.legal.agreement=In order to join Nature Network we will also create a FREE account for you on Nature.com. This allows you to browse and comment on Nature.com articles and connect these to your Nature Network profile. If you already have a Nature.com account simply sign in with your current details and we'll join the dots for you.
+label.legal.agreement.ext=Thank you for your interest.
+label.get.started=Welcome. To get started\, please register below.
+label.already.nature.account=If you already have a nature.com account you can use it to sign into Nature Network.
+label.your.nature.accountinfo=Your nature.com username &amp; password
+label.signin.nature.accountinfo=Sign in using your nature.com username &amp; password
+label.register.additional=Register Additional Information
+label.user.representation=User Representation Info
+label.register.additionalinfo=When a user posts information on Nature Network\, the following fields are published. You can\, however\, choose to remain anonymous by customising the privacy settings in your profile. For more information please see our <a href="/site/faq">FAQ</a>.
+label.register.privacy=Privacy Setting
+label.register.characters=Please confirm the words below
+label.register.characters.ensure=In order to reduce spamming\, this process ensures you are a real person and not an automated program.
+label.register.characters.text=This picture contains 6 characters
+label.register.termsCond=Nature Network Terms &amp; Conditions
+label.register.termsCond.policy=The Nature Network Terms and Conditions derives from the Nature.com and NPG principles and governs our relationship with users and others who interact with our sites. By using or accessing Nature Network\, you agree to this statement:
+label.register.termsCond.text=Text of terms and conditions
+label.register.termsCond.agree=I agree to Nature Network's <a href="http://www.nature.com/info/tandc.html" class="terms-n-conditions" onclick="window.open('http://www.nature.com/info/tandc.html'\,'_blank');return false;">Terms and Conditions</a>
+label.register.title=New Account
+label.register.info=<p>When you register you will not only have access to Nature Network\, but to all Nature websites with our single sign-on account.</p><p>If you have an existing account with any Nature website you can sign into Nature Network using that User ID and Password!</p>
+label.register.create.userid=Please create your User ID
+label.register.userid.use=<p>You will use this to sign in with each time you log on. This email will be used to confirm your registration at the end of this process.</p>
+label.register.create.password=Please create your password
+label.register.password.limit=Password must be of at least 6 characters
+label.register.newsletters=Would you like to receive News Letters from Nature.com
+label.registrationreq.title=Registration Required
+label.register.signup=Sign up for Nature Network
+label.register.check.natureaccount=<p>If you have an existing account with any Nature website you can sign into Nature Network using that User ID and Password</p>
+label.register.when.member=
+label.register.post.discussion=
+label.register.list.events=
+label.register.join.groups=
+label.register.create.profile=
+label.register.have.blog=
+label.welcome.title=Welcome nature.com user
+label.new.account=New Account
+label.welcome.user=Welcome to Nature Network
+label.success.login=Thank you for joining our Nature Network.<br/>Click on any of the following hyperlinked words below\, and you will automatically be logged into the site.
+label.success.helpfultips=Helpful tips to get started
+label.success.wheretobegin=Where to begin - see
+label.success.newworkbench=The New Workbench
+label.success.newworkbenchtext=See what is new in My Area\, the addition to the site where you can manage your day-to-day information.
+label.success.newQA=The New Q&amp;A Page
+label.success.newQAtext=See what users are asking and the answers from their peers and other Nature Network users.
+label.success.newprofile=The New Profile
+label.success.newprofiletext=A re-vamped version of the profile where your information will allow us to connect you to others in your field or area.
+label.success.blogs=Blogs
+label.success.blogstext=Where you can find information on all areas of science.
+label.success.forums=Forums
+label.success.forumstext=Where you can participate in lively discussions about the latest advancements in science.
+label.success.groups=Groups
+label.success.groupstext=Start your own public or private environment for your colleagues\, lab mates or fellow students.
+label.helptext=Help Text Goes Here
+label.prof.helptext=Provide your profession here
+label.job.helptext=Provide your job description here
+label.newsyes.helptext=Select this if you want to subscribe to newsletters
+label.newsno.helptext=Select this if you do not want to subscribe to newsletters
+label.privyes.helptext=Select this if you want a private profile
+label.privno.helptext=Select this if you want a public profile
+label.register.already.info=If you have an existing account with any Nature website you can sign into Nature Network using your User ID and Password.
+label.register.new.info=Please complete the form. Fields marked with a * are mandatory.
+label.registration.req.info=In order to join Nature Network we will also create a FREE account for you on Nature.com. This allows you to browse and comment on Nature.com articles and connect these to your Nature Network profile. If you already have a Nature.com account simply sign in with your current details and we'll join the dots for you.
+
+## WorkBench Constants
+label.workbench.addStuff=Add Stuff
+
+## Activity Type Names
+title.activity.affiliation=added affiliation - 
+title.activity.authorship=published - 
+title.activity.comment=commented - 
+title.activity.event=created event - 
+title.activity.friendship=added friend - 
+title.activity.connected=connected - 
+title.activity.group=posted in - 
+title.activity.group.membership=joined group - 
+title.activity.post=blogged - 
+title.activity.reply=replied to - 
+title.activity.topic=added topic - 
+title.activity.user=changed profile - 
+title.activity.question=asked - 
+title.activity.answer=answered to - 
+title.activity.following=following - 
+title.activity.followedBy=followed by - 
+
+## Activity Icon Names
+title.icon.affiliation.membership=/images/shared/icon_group_post.gif
+title.icon.authorship=/images/shared/icon_group_post.gif
+title.icon.comment=/images/shared/icon_group_post.gif
+title.icon.event=/images/shared/icon_group_post.gif
+title.icon.friendship=/images/shared/icon_group_post.gif
+title.icon.group=/images/shared/icon_group_post.gif
+title.icon.group.membership=/images/shared/icon_group_post.gif
+title.icon.post=/images/shared/icon_group_post.gif
+title.icon.reply=/images/shared/icon_group_post.gif
+title.icon.topic=/images/shared/icon_group_post.gif
+title.icon.user=/images/shared/icon_group_post.gif
+title.icon.question=/images/shared/icon_question.gif
+title.icon.answer=/images/shared/icon_answer.gif
+
+## Activity URL Patterns
+url.pattern.comment=$context/blogs/$blogid
+url.pattern.profile=$context/profile/$alias
+## $context/user/$alias/profile
+url.pattern.group=$context/groups/$alias
+url.pattern.post=$context/people/$user/blog/$postYear/$postMonth/$postDay/$postTitle
+url.pattern.topic=$context/groups/$group/forum/topics/$topic
+url.pattern.affiliation=$context/affiliations/$affiliationId
+url.pattern.question=$context/questions-answers/question/$topic-$questionID
+
+## Activity Types
+activity.type.friendship=Friendship
+
+## Search Result
+search.result.length=6
+
+## Activity Result
+items.perpage.searched.users=6
+
+contact.user.list.length=10
+
+##Manage Account
+label.manageaccount.mySettings = Your Settings
+label.manageaccount.goToProfile = Go to profile
+label.manageaccount.contactSettings = Contact Settings
+label.manageaccount.emailEditHeading = Your email is stored within your Nature.com account if you update this information here\, it will also update your nature.com account.
+label.manageaccount.accountDetails = Account Details
+label.manageaccount.dateJoined = Date Joined
+label.manageaccount.userStatus = User Status
+label.manageaccount.siteModerator = Site Moderator
+label.manageaccount.siteAdmin = Site Admin?
+label.manageaccount.contributionLevel = Contribution Level
+label.manageaccount.personalisedAlias = Personalised Alias
+label.manageaccount.editAlias = <p>This will form the end of the URL for your profile (e.g.: http://network.nature.com/people/alias).</p><p>Choose something unique and easy to remember. Make sure it's a URL you are happy with\, as once it is set you can't change it.</p><br/><p>Do not type in the whole URL for your profile. Just enter the string of letters that you want at the END of the URL. Do not put in spaces or slashes. Dashes(-) and underscores(_) are allowed.</p>
+label.manageaccount.changePassword = Change Password
+label.manageaccount.editPasswordMessage = Your password is a part of your Nature.com account if you update this information here\, it will also update your nature.com account.
+label.manageaccount.oldPassword  = Old Password 
+label.manageaccount.newPassword  = New Password 
+label.manageaccount.deleteAccountHeader = Delete your account
+label.manageaccount.deleteAccountMessage = If you no longer wish to be part of Nature Network\, please contact
+label.manageaccount.customerServices = Customer Services.
+ ################### text properties ends ###################################### 
+
+#################### SITE WIDE CONSTANTS  ######################################
+nature.network.webcontext=
+url.pattern.prefix.http = http://
+url.pattern.prefix.https = https://
+label.js.disabled=You need to have JavaScript enabled to use this page
+urls.login.required=loadTrackingPage\,loadMyNetworkPage\,viewProfile\,loadSiteAdminPage\,add-gadgets\,fields\,search-fields\,upload-field\,remap-field\,gadgets\,search-gadgets\,questions-answers\,edit\,edit-web-activities\,edit-education\,edit-publication\,edit-work-experience\,edit-affiliation\,web-activities\,education\,publication\,work-experience\,affiliation\,activities\,contacts\,manage-account\,edit-contacts\,edit-manage-account\,edit-activities
+##### Added ####### 
+PUBMED_URL_PREFIX=http://www.ncbi.nlm.nih.gov/pubmed/
+DOI_URL_PREFIX=http://dx.doi.org/
+error.privilege.text=You are not privileged to view this page
+nature.network.profile.context=/profile
+
+#Related Questions
+related.questions.count=3
+
+stop.words=a's\, able\, about\, above\, according\, accordingly\, across\, actually\, after\, afterwards\, again\, against\, ain't\, all\, allow\, allows\, almost\, alone\, along\, already\, also\, although\, always\, am\, among\, amongst\, an\, and\, another\, any\, anybody\, anyhow\, anyone\, anything\, anyway\, anyways\, anywhere\, apart\, appear\, appreciate\, appropriate\, are\, aren't\, around\, as\, aside\, ask\, asking\, associated\, at\, available\, away\, awfully\, be\, became\, because\, become\, becomes\, becoming\, been\, before\, beforehand\, behind\, being\, believe\, below\, beside\, besides\, best\, better\, between\, beyond\, both\, brief\, but\, by\, c'mon\, c's\, came\, can\, can't\, cannot\, cant\, cause\, causes\, certain\, certainly\, changes\, clearly\, co\, com\, come\, comes\, concerning\, consequently\, consider\, considering\, contain\, containing\, contains\, corresponding\, could\, couldn't\, course\, currently\, definitely\, described\, despite\, did\, didn't\, different\, do\, does\, doesn't\, doing\, don't\, done\, down\, downwards\, during\, each\, edu\, eg\, eight\, either\, else\, elsewhere\, enough\, entirely\, especially\, et\, etc\, even\, ever\, every\, everybody\, everyone\, everything\, everywhere\, ex\, exactly\, example\, except\, far\, few\, fifth\, first\, five\, followed\, following\, follows\, for\, former\, formerly\, forth\, four\, from\, further\, furthermore\, get\, gets\, getting\, given\, gives\, go\, goes\, going\, gone\, got\, gotten\, greetings\, had\, hadn't\, happens\, hardly\, has\, hasn't\, have\, haven't\, having\, he\, he's\, hello\, help\, hence\, her\, here\, here's\, hereafter\, hereby\, herein\, hereupon\, hers\, herself\, hi\, him\, himself\, his\, hither\, hopefully\, how\, howbeit\, however\, i'd\, i'll\, i'm\, i've\, ie\, if\, ignored\, immediate\, in\, inasmuch\, inc\, indeed\, indicate\, indicated\, indicates\, inner\, insofar\, instead\, into\, inward\, is\, isn't\, it\, it'd\, it'll\, it's\, its\, itself\, just\, keep\, keeps\, kept\, know\, knows\, known\, last\, lately\, later\, latter\, latterly\, least\, less\, lest\, let\, let's\, like\, liked\, likely\, little\, look\, looking\, looks\, ltd\, mainly\, many\, may\, maybe\, me\, mean\, meanwhile\, merely\, might\, more\, moreover\, most\, mostly\, much\, must\, my\, myself\, name\, namely\, nd\, near\, nearly\, necessary\, need\, needs\, neither\, never\, nevertheless\, new\, next\, nine\, no\, nobody\, non\, none\, noone\, nor\, normally\, not\, nothing\, novel\, now\, nowhere\, obviously\, of\, off\, often\, oh\, ok\, okay\, old\, on\, once\, one\, ones\, only\, onto\, or\, other\, others\, otherwise\, ought\, our\, ours\, ourselves\, out\, outside\, over\, overall\, own\, particular\, particularly\, per\, perhaps\, placed\, please\, plus\, possible\, presumably\, probably\, provides\, que\, quite\, qv\, rather\, rd\, re\, really\, reasonably\, regarding\, regardless\, regards\, relatively\, respectively\, right\, said\, same\, saw\, say\, saying\, says\, second\, secondly\, see\, seeing\, seem\, seemed\, seeming\, seems\, seen\, self\, selves\, sensible\, sent\, serious\, seriously\, seven\, several\, shall\, she\, should\, shouldn't\, since\, six\, so\, some\, somebody\, somehow\, someone\, something\, sometime\, sometimes\, somewhat\, somewhere\, soon\, sorry\, specified\, specify\, specifying\, still\, sub\, such\, sup\, sure\, t's\, take\, taken\, tell\, tends\, th\, than\, thank\, thanks\, thanx\, that\, that's\, thats\, the\, their\, theirs\, them\, themselves\, then\, thence\, there\, there's\, thereafter\, thereby\, therefore\, therein\, theres\, thereupon\, these\, they\, they'd\, they'll\, they're\, they've\, think\, third\, this\, thorough\, thoroughly\, those\, though\, three\, through\, throughout\, thru\, thus\, to\, together\, too\, took\, toward\, towards\, tried\, tries\, truly\, try\, trying\, twice\, two\, un\, under\, unfortunately\, unless\, unlikely\, until\, unto\, up\, upon\, us\, use\, used\, useful\, uses\, using\, usually\, value\, various\, very\, via\, viz\, vs\, want\, wants\, was\, wasn't\, way\, we\, we'd\, we'll\, we're\, we've\, welcome\, well\, went\, were\, weren't\, what\, what's\, whatever\, when\, whence\, whenever\, where\, where's\, whereafter\, whereas\, whereby\, wherein\, whereupon\, wherever\, whether\, which\, while\, whither\, who\, who's\, whoever\, whole\, whom\, whose\, why\, will\, willing\, wish\, with\, within\, without\, won't\, wonder\, would\, would\, wouldn't\, yes\, yet\, you\, you'd\, you'll\, you're\, you've\, your\, yours\, yourself\, yourselves\, zero
+
+########################## MAIL CONTENT FOR NOTIFICATION OF REJECTION OF SME REQUEST STARTS #################################
+mail.sme.reject.siteadmin = Dear Site Admin\,<br/> <br/> $1 has rejected your Subject Matter Expert Request on $2 <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>**************************************************************** 
+mail.sme.reject.siteadmin.subject = Rejection Of Subject Matter Expert Request
+########################## MAIL CONTENT FOR NOTIFICATION OF REJECTION OF SME REQUEST ENDS #################################
+
+#Site Admin Mail Constants
+mail.expert.subject=Your expert assignment status
+mail.expert.message.assign=Dear $1\,<br/><br/>Congratulations! You have been assigned as an expert to the field <strong>$2</strong>.<br/><br/>Thanks\,<br/>Nature Network Admin <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+mail.expert.message.remove=Dear $1\,<br/><br/>You have been removed as an expert from the field <strong>$2</strong>.<br/><br/>Thanks\,<br/>Nature Network Admin <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+expert.to.type=Expert
+email.type.expert=Expert
+
+################################ User Registration Mail Constants #########################################
+mail.user.reg.first=Dear $1\,<br/><br/>Welcome to Nature Network\, the place for scientists to meet and collaborate\, share opinions and keep up to date with jobs and events info in their area.<br/><br/>I'm $2\, the Product Manager for Nature Network and if you'd like to find out more about what you can do here\, why not follow me ( <a href="$3">$31</a> ) or join my network ( <a href="$8">$81</a> )? You'll then see updates on what I've been commenting on recently as well as being able to see who else is in my network\, including the rest of the NN team. You can also send me a message if you have any questions or suggestions about the site.<br/><br/>In addition to the blogs\, forums and groups where you can read and discuss all aspects of science\, we also have "hubs" where you can connect with local scientists\, and find out about jobs and events in your area. There's also a new Question and Answer section where you can consult the community or share your knowledge to become a topic expert. Finally\, there's the exciting Workbench feature where you can customise your own space on the site with useful applications from our growing online toolbox. These include tools to manage your network\, to access Facebook and Twitter and to do scientific calculations.<br/><br/>To get started\, why not introduce yourself in the New Users forum ( <a href="$4">$41</a> ) or browse the groups ( <a href="$5">$51</a> ) and forums ( <a href="$6">$61</a> ) to find others with similar interests?<br/><br/>Welcome to the network!<br/><br/>$7<br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+email.type.registration=Registration
+registration.to.type=Registration
+mail.user.reg.first.sub=Welcome to Nature Network
+mail.user.reg.second=Welcome to Nature Network $1.<br/><br/>To make sure you don't miss out the best of Nature Network\, we'd like you to join our network. That way you can automatically stay in touch with our contributions\, announcements and highlights.<br/><br/>If you'd like to add us to your network you can do so by going here: <a href="$21">$2</a>.<br/><br/>To see our profile click here: <a href="$31">$3</a>.<br/><br/>We look forward to seeing you online!<br/><br/>Regards\,<br/><br/>The Nature Networking team.<br/><br/><br/>(Please do not reply to this message. To send a message to Nature Network\, please login and then click here: <a href="$41">$4</a>)<br/><br/>-------------------------------------------<br/><br/>If you do not want to be in this person's network\, click here: <a href="$51">$5</a>.<br/><br/>This message was sent on behalf of $6 through Nature Network [<a href="http://network.nature.com">http://network.nature.com</a>].<br/><br/>If you feel this message was not intended for you\, or is inappropriate\, please click here [<a href="$71">$7</a>] to block this user from sending you further messages and to report this email to the Nature Network staff. You can also contact the NN staff directly at <a href="mailto:network@nature.com">network@nature.com</a>.<br/><br/>Nature Publishing Group is not responsible for the content of this e-mail.Any views or opinions expressed in this e-mail do not necessarily reflect those of Nature Publishing Group.<br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>**************************************************************** 
+mail.user.reg.second.sub=Nature Network invitation
+nature.user.email=do-not-reply@nature.com
+nature.prod.manager.email=louwoodley@gmail.com
+
+################################ Build Time for refreshing scripts ###################
+build.time=1
+
+######################## HOME PAGE MENU LINKS #######################
+hubs.link=hubs
+blogs.link=blogs
+people.link=people
+groups.link=groups
+forums.link=forums
+
+qa.profile.record.count=10
+add.app.info=In order to use this feature you need to login to Nature Network. If you are not yet registered with Nature Network\, register now. Once registered\, you will be able to interact with the community members\, express your thoughts in Groups\, Blogs and Forums\, ask your questions to the large scientific community and manage your personalized workspace.<br/><br/><div align=\"right\"><a class=\"more\" href=\"/create-account\" onclick=\"setCookieForRedirect();\">Register</a>&nbsp;&nbsp;<a class=\"more\" href=\"/login\" onclick=\"setCookieForRedirect();\">Login</a></div>
+profile.act.info=In order to use this feature you need to login to Nature Network. If you are not yet registered with Nature Network\, register now. Once registered\, you will be able to interact with the community members\, express your thoughts in Groups\, Blogs and Forums\, ask your questions to the large scientific community and manage your personalized workspace.<br/><br/><div align=\"right\"><a class=\"more\" href=\"/create-account\" onclick=\"setPopupval();\">Register</a>&nbsp;&nbsp;<a class=\"more\" href=\"/login\" onclick=\"setPopupval();\">Login</a></div>
+workbench.help.text=Welcome to your workbench <br/><br/> The Workbench lets you install widgets\, allowing you to compile and control a growing library of tools and information without having to visit multiple sites. <br/><br/> We\'ve started you off with our default widgets. To install more on to your workbench: <br/><br/>1. Click \'Add app\' in the top-left corner of workbench.<br/> 2. Mouse over each icon to read a short description of it. Once you find a widget you\'d like to add\, click the \'Add\' button. <br/>3. You can then choose to add more widgets\, or return to your workbench. <br/><br/>You can arrange your workbench by dragging widgets around on the page. To do this click and hold on the blue title bar of each.<br/><br/>If available\, edit your widgets' settings by clicking the down-arrow in the title bar and choosing \'Settings\'. For more detailed information\, please view our <a href=\'/site/faq\'>FAQ</a>.
+label.login.other=You must login to navigate to this page
+SITE_IMAGE_TWITTER=/images/twitter.jpg
+SITE_IMAGE_CONNOTEA=/images/connotea.gif
+SITE_IMAGE_FRIENDFEED=/images/friendfeed.gif
+SITE_IMAGE_CITEULIKE=/images/citeulike.gif
+SITE_IMAGE_DELICIOUS=/images/delicious.gif
+###################### texTile markup help text #########################
+textile.markup.help.text=<b>Description</b><br/>How do I enter links\, images\, and formatted text? To hyperlink a word or phrase\, place it in quotation marks followed by a colon and the URL e.g. "text to link":http://example.com/url/to/link/to<br/><br/><b>*Bold*</b> and <i>_italic_</i> are achieved like this.<br/><br/>Embed images by surrounding the image location with exclamation marks: !http://path.to/image.ext! <br/><br/>An unordered list can be made be prefixing each list item with an asterisk (*) and a space. An ordered list can be made be prefixing each list item with a hash symbol (#). Make sure you precede your list with a blank line.<br/><a href="#" onclick="window.open('/site/help'\,'_blank');">View more detailed help</a>
+
+######## Labels ##############
+label.menu.yourworkbench=Your Workbench
+label.menu.workbench=Workbench
+label.menu.administer=Admin
+#######################Profile Objective Text ###########################
+profile.objective.text=By completing your profile you will help colleagues\, friends and potential collaborators find you.
+#######################Edit Profile Help Text############################
+profile.given.name.help.text=Given Name
+profile.family.name.help.text=Family Name
+profile.title.help.text=Title
+profile.dateOfBirth.help.text=DD/MM/YYYY
+profile.profession.help.text=Profession
+profile.specialization.help.text=Specialization
+profile.skype.help.text=Skype
+profile.aim.help.text=AIM
+profile.yahoo.help.text=Yahoo
+profile.msn.help.text=MSN
+##############################Edit Synopsis Labels#####################################
+profile.may.message.text=Yes\, allow other members of Nature Network to send me messages.
+profile.may.message.help.text=Let other members of Nature Network contact you? &lt;br/&gt;If you check this box\, a link allowing users to contact you will appear on your profile page. It will only be visible to other members of Nature Network. They will be able to send a message to the email address specified in your nature.com profile. Your email address will not be revealed to them unless you choose to reply.
+profile.show.contact.details.text=Who do you want to display these contact details to?
+profile.show.contact.details.noOne=No one
+profile.show.contact.details.network=Everyone in your network
+profile.show.contact.details.everyOne=Everyone
+banned.user.message=This user\'s profile cannot be viewed as the user has been banned from the site.
+current.job.text= This is my current job
+############################### Rails Constants #######################################
+nature.network.rails.admin.label=Rails Admin
+nature.network.rails.admin.url=admin 
+
+################################ SEO STARTS ##########################################
+profile.title.synopsis={0} | Profile - Synopsis
+profile.metadescription.synopsis=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.synopsis={0}\, Profile - Synopsis
+profile.title.webnetwork-activity={0} | Profile - Web Network Activity
+profile.metadescription.webnetwork-activity=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.webnetwork-activity={0}\, Profile - Web Network Activity
+profile.title.education={0} | Profile - Education
+profile.metadescription.education=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.education={0}\, Profile - Education
+profile.title.workexperience={0} | Profile - Work Experience
+profile.metadescription.workexperience=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.workexperience={0}\, Profile - Work Experience
+profile.title.publication={0} | Profile - Publications\, Grants and Awards 
+profile.metadescription.publication=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.publication={0}\, Profile - Publications\, Grants and Awards 
+profile.title.affiliations={0} | Profile - Affiliations
+profile.metadescription.affiliations=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.affiliations={0}\, Profile - Affiliations
+profile.title.activitystream={0} | Profile - Activity Stream
+profile.metadescription.activitystream=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.activitystream={0}\, Profile - Activity Stream
+profile.title.connections={0} | Profile - Contacts
+profile.metadescription.connections=View {0}'s professional profile on Nature Network.  Nature Network is the professional networking website for scientists around the world. Join Nature Network to connect to {0}. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+profile.metakeywords.connections={0}\, Profile - Connections
+
+question-answer.title.all=Questions and Answers
+question-answer.metadescription.all=View featured Questions and Answers at Nature Network. Nature Network is the professional networking website for scientists around the world.As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+question-answer.title.single={0} ({1}) - Questions and Answers
+question-answer.metadescription.single=View ongoing questions and answers on topic - '{0}' in Nature Network.  Nature Network is the professional networking website for scientists around the world. As a member of Nature Network you can manage your detailed profile\, expand your professional network\, discuss your ideas with fellow scientists\, participate in groups and forums\, publish science blogs and enjoy many more exciting features.
+################################ SEO ENDS ##########################################
+
+################################ WEBTRENDS STARTS ##################################
+login.cn_g=Login and Registration
+login.cn_s=Login
+register.cn_g=Login and Registration
+register.cn_s=Register
+workbench.cn_g=Workbench
+workbench.cn_s=Workbench
+workbench.appgallery.cn_g=Workbench
+workbench.appgallery.cn_s=App Gallery
+mynetwork.cn_g=Workbench
+mynetwork.cn_s=Network
+peopletracker.cn_g=Workbench
+peopletracker.cn_s=People Tracker
+qagadget.cn_g=Workbench
+qagadget.cn_s=Questions & Answers
+qalanding.cn_g=Questions & Answers
+qalanding.cn_s=Landing
+qaquestion.cn_g=Questions & Answers
+qaquestion.cn_s=Question
+profile.synopsis.cn_g=Profile
+profile.synopsis.cn_s=Synopsis
+profile.webactivity.cn_g=Profile
+profile.webactivity.cn_s=Web and Network Activity
+profile.education.cn_g=Profile
+profile.education.cn_s=Education
+profile.experience.cn_g=Profile
+profile.experience.cn_s=Work Experience
+profile.publication.cn_g=Profile
+profile.publication.cn_s=Publications, Grants and Awards
+profile.affiliation.cn_g=Profile
+profile.affiliation.cn_s=Affiliations
+profile.activitystream.cn_g=Profile
+profile.activitystream.cn_s=Activity Stream
+profile.connections.cn_g=Profile
+profile.connections.cn_s=Connections
+profile.settings.cn_g=Profile
+profile.settings.cn_s=Settings
+profile.edit.synopsis.cn_g=Profile
+profile.edit.synopsis.cn_s=Edit - Synopsis
+profile.edit.webactivity.cn_g=Profile
+profile.edit.webactivity.cn_s=Edit - Web and Network Activity
+profile.edit.affiliation.cn_g=Profile
+profile.edit.affiliation.cn_s=Edit - Affiliations
+profile.edit.education.cn_g=Profile
+profile.edit.education.cn_s=Edit - Education
+profile.edit.publication.cn_g=Profile
+profile.edit.publication.cn_s=Edit - Publications, Grants and Awards
+profile.edit.experience.cn_g=Profile
+profile.edit.experience.cn_s=Edit - Work Experience
+profile.edit.activitystream.cn_g=Profile
+profile.edit.activitystream.cn_s=Edit - Activity Stream
+profile.edit.settings.cn_g=Profile
+profile.edit.settings.cn_s=Edit - Settings
+profile.edit.connection.cn_g=Profile
+profile.edit.connection.cn_s=Edit - Connections
+
+
+################################ WEBTRENDS END ##################################
+
+######################## Invitation mail Starts ####################
+mail.invitation.internal.user=<a href="$1">$2</a> has added you as a connection on <a href="$3">Nature Network.</a> $4 <br/> <br/> Please click the following link to accept the invitation: <br/> <a href="$5">$5</a> <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+mail.invitation.external.user=<a href="$1">$2</a> has added you as a connection on <a href="$3">Nature Network.</a> $4 <br/> <br/> To register and accept the invitation\, please click the following link: <br/> <a href="$5">$5</a> <br/><br/>*******************************************************************<br/><br/>DISCLAIMER: This e-mail is confidential and should not be used by anyone who is not the original intended recipient. If you have received this e-mail in error please inform the sender and delete it from your mailbox or any other storage mechanism. Neither Macmillan Publishers Limited nor any of its agents accept liability for any statements made which are clearly the sender's own and not expressly made on behalf of Macmillan Publishers Limited or one of its agents. Please note that neither Macmillan Publishers Limited nor any of its agents accept any responsibility for viruses that may be contained in this e-mail or its attachments and it is your responsibility to scan the e-mail and attachments (if any). No contracts may be concluded on behalf of Macmillan Publishers Limited or its agents by means of e-mail communication. Macmillan Publishers Limited Registered in England and Wales with registered number 785998 Registered Office Brunel Road\, Houndmills\, Basingstoke RG21 6XS<br/><br/>****************************************************************
+######################## Invitation mail Ends ####################
+
+########################Edit Web activity Help Text############################## 
+edit.blog.help.text=Add links to your Nature Network blog and any other external blogs. 
+edit.external.website.help.text=List any other relevant websites here. 
+edit.social.networking.help.text=If you would like to share your activity from Connotea\, Friendfeed\, Twitter\, CiteUlike or Delicious\, please enter your details below. Content from these sites will be shown on your external activity feed page. 
+edit.group.help.text=Below are the groups and forums you have joined. To unsubscribe\, go to the group or forum page and remove yourself there. 
+########################Edit Web activity Help Text Ends############################## 
+
+#########################Welcome page labels###################################### 
+welcome.page.left.panel.text=Welcome to Nature Network! Here we've highlighted some key areas of the new site for you to explore.
+welcome.page.success.login.text=Thank you for joining our Nature Network. 
+#########################Welcome page labels ends###################################### 
+
+#-- JUNE 10 DEPLOY-281
+recaptcha.public.key=6LeKcroSAAAAAO49NAe_OpfYmuOqp-NdNz-mGKD8
+recaptcha.private.key=6LeKcroSAAAAAJlhoBe4B2l66ftMnO2j6AutA4Lo
+
+### August 10 Deploy-321 
+error.account.problem=There is a problem with your account. Please contact network@nature.com for assistance.
+error.account.creation.login=Your Network account has been created but you could not be automatically logged in - please try to login again.
+error.general=An error occurred. Please try again.
+mail.error.type=Error
+mail.error.subject=[Nature Network] System Error
+mail.error.address.to=NatureNetworkTech@macmillan.co.uk
+mail.error.message=A problem has occurred in the Nature Network site. See below for further details.<br/><br/>Problem: $problemDescription.<br/>Date: $date<br/>User: $userEmail<br/><br/>Detail: <br/>$problemDetail<br/>
+
+#DEPLOY-353
+inactive.user.message=Sorry\, {0} {1} is no longer a member of Nature Network.

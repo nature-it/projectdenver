@@ -1,0 +1,159 @@
+npg.natureprotocols.host=http://www.nature.com/protocols
+poolNewsPassword=CHANGEME
+poolNewsUser=news_production
+poolNewsJdbcUrl=jdbc\:mysql\://192.168.4.67\:3306/articling_production
+poolNewsDriverClass=com.mysql.jdbc.Driver
+rpoolDriverClass=com.microsoft.sqlserver.jdbc.SQLServerDriver
+rpoolJdbcUrl=jdbc:sqlserver://naturedb.nature.com:1433;DatabaseName=Reg_Data;applicationName=livePalgraveConnect
+rpoolPassword=CHANGEME
+rpoolUser=app_foxtrot_palgrave
+#rpoolJdbcUrl=jdbc:sqlserver://naturedb.nature.com:1433;DatabaseName=Reg_Data
+poolDriverClass=com.microsoft.sqlserver.jdbc.SQLServerDriver
+poolJdbcUrl=jdbc:sqlserver://naturedb.nature.com:1433;DatabaseName=Reg_Data;applicationName=livePalgraveConnect
+poolPassword=CHANGEME
+poolUser=app_foxtrot_palgrave
+poolMinPoolSize=5
+poolMaxIdleTime=1000
+poolTestConnection=70
+poolMaxPoolSize=35
+poolMaxAge=0
+poolInitialPoolSize=10
+poolCheckoutTimeout=4000
+#cacheServers=10.1.1.14:11212|10.1.1.18:11212|10.1.1.33:11212
+#cacheServers=10.1.1.202:11212|10.1.1.203:11212|10.1.1.204:11212
+cacheServers=npgcache1:11211|npgcache2:11211
+docroot=/mnt/fs/Web/palgrave
+docBase=/mnt/fs/Web/palgrave
+npg.nboss.docbase=/mnt/fs/web/palgrave
+npg.soap.jpt.license.props=/mnt/fs/web/palgrave/pc/config/jpt.properties
+mysiteaccount.reports.dir=/mnt/fs/web/palgrave/pc/Counter/NPG
+pcTemplatesPath = /templates/
+file.separator=/
+customer.service.email=institutions@nature.com
+npg.cybersource.prop=
+npg.tango.host=http://bogus.com
+#npg.articling.host=http://beta-pubadmin.nature.com/articling
+recommendedNChinaFileDocBase=
+npg.nboss.mailserver=babylon.nature.com
+npg.nboss.newsfile=/mnt/fs/web/palgrave/pc/templates/press_config/Dataout.xml
+npg.nboss.helpfile=/mnt/fs/web/palgrave/pc/templates/press_config/helptext.xml
+npg.naturejobs.host=http://www.nature.com/naturejobs/science
+npg.isnsearch.host=
+npg.standard.host=http://www.palgraveconnect.com/pc
+os.name=
+cybersourceHostID=208.59.201.74
+cybersourceMerchantID=naturepub
+cybersourceServerURL=http://ics2test.ic3.com:80/
+cybersourceKeysPath=/opt/ics/keys
+pc.pdf.max.size=2000000
+pc.paging.count=20
+searchStopWords=the,on,of,and,in,about,1,after,2,all,also,3,an,4,be,5,another,6,any,7,are,8,as,9,at,0,because,$,been,before,being,between,both,but,by,came,can,come,could,did,do,each,for,from,get,got,has,had,he,have,her,here,him,himself,his,how,if,into,is,it,like,make,many,me,might,more,most,much,must,my,never,now,only,or,other,our,out,over,said,same,see,should,since,some,still,such,take,than,that,their,them,then,there,these,they,this,those,through,to,too,under,up,very,was,way,we,well,were,what,where,which,while,who,with,would,you,your,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,&,when,will
+
+mime-doc=application/msword
+mime-ppt=application/mspowerpoint
+mime-xls=application/msexcel
+mime-jpg=image/jpeg
+mime-tif=image/tiff
+mime-gif=image/gif
+mime-pdf=application/pdf
+mime-zip=application/zip
+mime-txt=text/plain
+mime-html=text/html
+mime-xml=text/xml
+
+#credit card encryption certificate location
+cc.encrypt.certificate.path=/mnt/fs/cert/NPGOperationsEncryption.cer
+athens-root=/mnt/fs/Web/palgrave/pc
+#max allowed concurrent logins. (individual logins) 
+personal.user.max.concurrency.limit=10
+
+# MarkLogic connectivity Details
+#marklogic.url = http://localhost:7080/contentstore_query/execute
+marklogic.upload.url = http://localhost:7080/contentstore_uploader/insert_ebook
+marklogic.update.url = http://localhost:7080/charleston_document/document
+marklogic.charleston.url = http://localhost:7080/charleston_document/document
+
+
+marklogic.ebooks.username = palgraveconnect
+marklogic.ebooks.password = CHANGEME
+marklogic.ebooks.environment = live
+
+#ML properties used by Foxtrot(these will have to be better named once we resolve FOX-1797)
+marklogic.user = foxtrot_web_user
+marklogic.password = CHANGEME
+environment = live
+
+# Properties for mailing list
+mailingListFromAddress = Connect_mailinglist@palgrave.com
+mailingListFromAddressDisplayName = Mailing List Group
+mailingListToAddress = Connect_mailinglist@palgrave.com
+mailingListToAddressDisplayName = Mailing List Group
+mailingListEmailSubject = Join our Mailing List - Request
+# Provide multiple email addresses (if required) with comma separated.
+mailingListCcAddress =  Connect_mailinglist@palgrave.com
+#Open Athens
+#athensConfig=/pc/config/athens/atacamaConfig_athens.xml
+#athensConfig=/pc/config/openathens1-2-1/AtacamaBaseConfigAthens.xml
+athens.resource.name = NPG_PALCON
+
+bibitConfigFile = bibit_palgrave
+
+site.environment.prefix = www
+toLibrarianFromAddress=recommendations@palgrave.com
+toLibrarianFromAddressDisplayName=Palgrave Connect Recommendations
+emailSubjectToLibrarian=Recommendation for Palgrave Connect Collections
+onlineSalesAddressGeneral=onlinesales@palgrave.com
+onlineSalesAddressUS=onlinesales@palgrave-usa.com
+subjectPrefixForOnlineSalesTeam=Palgrave Connect Recommendation for
+displayNameOfToAddressOnlineSalesGeneral=Palgrave Online Sales
+displayNameOfToAddressOnlineSalesUS=Palgrave Online Sales US
+
+#Added for 5.1.0.4RC1 nature.jar just to keep the jetty boot-strap going. From 5.1.1 nature.jar, delete these entries
+exutors.fixed.pool.size=1
+webtrends.dcsid=N/A
+webtrends.events.service.baseUrl=N/A
+webtrends.id.service.baseUrl=N/A
+webtrends.service.timeout=1000
+
+#DEPLOY-250
+cookie.domain=.palgraveconnect.com
+
+#DEPLOY-369
+# Shibboleth
+#shibbolethConfig=/usr/local/jetty-palgrave/etc/pc/openathens1-2-1/AtacamaBaseConfigUKFed.xml
+shibbolethConfig=/mnt/fs/Web/palgrave/pc/config/openathens1-2-1/AtacamaBaseConfigUKFed.xml
+# Added for 5.6.0RC4 nature.jar just to keep the jetty boot-strap going.
+marklogic.host=192.168.4.45
+marklogic.port=8003
+marklogic.db=Documents
+athensConfig=/mnt/fs/Web/palgrave/pc/config/openathens1-2-1/AtacamaBaseConfigAthens.xml
+
+#DEPLOY-441
+content.delivery.pdf.caching.enabled=false
+cache.interval.config.filename=cache.interval
+
+#DEPLOY-481
+pc.institution.logo.directory=images/institutions
+# Added for 6.1.0.RC1 nature.jar just to keep the jetty boot-strap going.
+uri.site=http://www.palgraveconnect.com
+
+# Added for admin implementation
+admin.docBase=/mnt/fs/Web/palgrave/pc
+admin.upload.inputFolder = upload
+admin.upload.outputFolder = ML_input
+admin.upload.errorFolder = error
+admin.xref.outputFolder = xrefs
+admin.title.outputFolder = titles
+imagemagic.location=/usr/local/bin
+marklogic.ebooks.file.root = /palgrave/pc/ML_input
+admin.xref.username = nature
+admin.xref.password = CHANGEME
+admin.xref.environment = live
+admin.deletebook.url = http://localhost:7080/charleston_document/document
+admin.deletebook.userName = palgraveconnect
+admin.deletebook.password = CHANGEME
+admin.ldap.url = ldaps://192.168.88.208:636
+admin.ldap.settings = ou=People,dc=nature,dc=com
+admin.ldap.cacert=/mnt/fs/web/palgrave/pc/admin/certs/cacerts
+admin.ldap.cacert.password=CHANGEME
+admin.title.outputFolder=titles
