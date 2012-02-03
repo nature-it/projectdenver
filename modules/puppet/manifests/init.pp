@@ -13,7 +13,6 @@ class puppet {
           name      => "puppet",
           ensure    => running,
           enable    => true,
-          hasstatus => true,
           require   => File["/etc/init.d/puppet"]
   }
 }
