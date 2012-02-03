@@ -14,7 +14,6 @@ class puppet {
           ensure    => running,
           enable    => true,
           hasstatus => true,
-          subscribe => File["/etc/environment"],
           require   => File["/etc/init.d/puppet"]
   }
 }
