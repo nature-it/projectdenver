@@ -1,4 +1,5 @@
 # /etc/puppet/manifests/yum/init.pp
+
 class yum::client {
   if ($operatingsystem == "RedHat") or ($operatingsystem == "CentOS") {
     case $lsbmajdistrelease {

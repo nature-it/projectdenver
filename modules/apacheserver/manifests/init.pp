@@ -1,17 +1,24 @@
 #/etc/puppet/modules/apacheserver/manifests/init.pp
 
-#All apache servers need the package and our logrotate script.
 class apacheserver {
   package { "httpd": ensure=>installed }
   file { "/etc/httpd/conf.d/vhosts/":
     require => Package["httpd"],
-    ensure => directory,
+    ensure  => directory,
   }
 }
 
 # Define a vhost which will be used to generate a vhosts/<name>.conf file 
 # Can pass in a different template, but the base will include most of what we do (access control, redirects, proxyconfig)
-# Todo:  Modify /etc/httpd/conf.d/vhosts.conf to include vhosts/* , currently left as a manual step.
+# Skel:
+#
+# apacheserver::vhost {
+#     "xxx.nature.com":
+#           name       => "xxx.nature.com",
+#           acblock    => "Include /etc/httpd/conf/basic_ip_restrictions.conf",
+#           proxyblock => "RewriteRule ^/xxx/(.*)$ http://localhost:7080/xxx/$1 [P,L]", 
+#  }
+
 define apacheserver::vhost($port="80",$basedir="/var/www/${name}",$docroot="/var/www/${name}/htdocs",$template="apacheserver/vhost.erb",$serveraliases="",$priority="99",$acblock="",$proxyblock="",$redirblock="") {
   include apacheserver
   file { "/etc/httpd/conf.d/vhosts/${priority}-${name}": 

@@ -1,6 +1,5 @@
 #/etc/puppet/modules/puppet/manifests/init.pp
 
-#All apache servers need the package and our logrotate script.
 class puppet {
   file {
       "/etc/init.d/puppet":
@@ -15,6 +14,7 @@ class puppet {
           ensure    => running,
           enable    => true,
           hasstatus => true,
+          subscribe => File["/etc/environment"],
           require   => File["/etc/init.d/puppet"]
   }
 }
